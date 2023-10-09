@@ -49,7 +49,7 @@ public class HotelesController {
 
     @PostMapping("/hoteles/{id}/edit/save")
     public String hotelEditarGuardar(@PathVariable("id") Integer id, @ModelAttribute Hotel hotel){
-        hotelRepository.actualizarHotel(id, hotel.getNombre(), ((Integer) hotel.getTelefono()));
+        hotelRepository.actualizarHotel(id, hotel.getNombre(), hotel.getTelefono());
         return "redirect:/hoteles";
 
     }
