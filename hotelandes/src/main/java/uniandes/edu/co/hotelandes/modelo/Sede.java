@@ -4,6 +4,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
@@ -17,14 +19,27 @@ public class Sede {
     private String telefono;
     private String direccion;
 
-    public Sede(Integer id, String nombre, String telefono, String direccion) {
+    @ManyToOne
+    @JoinColumn(name = "Hoteles", referencedColumnName = "id")
+    private Hotel hotel;
+
+
+    public Sede(Integer id, String nombre, String telefono, String direccion, Hotel hotel) {
         this.id = id;
         this.nombre = nombre;
         this.telefono = telefono;
         this.direccion = direccion;
+        this.hotel = hotel;
     }
 
     public Sede(){;}
+
+    public Hotel getHotel(){
+        return hotel;
+    }
+    public void setHotel(Hotel hotel){
+        this.hotel=hotel;
+    }
 
     public Integer getId() {
         return id;

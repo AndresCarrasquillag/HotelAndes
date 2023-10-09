@@ -36,7 +36,7 @@ public class RolesController {
     }
 
     @GetMapping("/roles/{id}/edit")
-    public String barEditarForm(@PathVariable("id") Integer id, Model model) {
+    public String rolEditarForm(@PathVariable("id") Integer id, Model model) {
         Rol rol = rolRepository.darRol(id);
         if (rol != null) {
             model.addAttribute("rol", rol);
@@ -56,7 +56,7 @@ public class RolesController {
     }
 
     @GetMapping("/roles/{id}/delete")
-    public String barEliminar(@PathVariable("id") Integer id) {
+    public String RolEliminar(@PathVariable("id") Integer id) {
         rolRepository.deleteRol(id);
         return "redirect:/roles";
     }

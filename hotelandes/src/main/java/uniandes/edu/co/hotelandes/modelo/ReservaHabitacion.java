@@ -14,6 +14,19 @@ public class ReservaHabitacion {
     public  ReservaHabitacion(Reserva id_reserva, Habitacion id_habitacion) {
 
         this.pk = new ReservaHabitacionPK(id_habitacion, id_reserva);
-
     }
+
+    public ReservaHabitacion(){
+        super();
+    }
+
+    public ReservaHabitacionPK getPk() {
+        return pk;
+    }
+
+    public void setPk(ReservaHabitacionPK pk) {
+        this.pk = pk;
+    }
+
+    
 }

@@ -16,5 +16,18 @@ public class ServicioEnSede {
         this.pk = new ServicioEnSedePK(id_servicio, id_sede);
 
     }
+
+    public ServicioEnSede(){
+        super();
+    }
+
+    public ServicioEnSedePK getPk() {
+        return pk;
+    }
+
+    public void setPk(ServicioEnSedePK pk) {
+        this.pk = pk;
+    }
+    
     
 }

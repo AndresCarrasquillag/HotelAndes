@@ -4,6 +4,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
@@ -17,15 +19,25 @@ public class Usuario {
     private String password;
     private String nombre;
     private String telefono;
+
+    @ManyToOne
+    @JoinColumn(name = "Roles", referencedColumnName = "id")
+    private Rol rol;
     
-    public Usuario(Integer id, String user, String password, String nombre, String telefono) {
+    public Usuario(Integer id, String user, String password, String nombre, String telefono, Rol rol) {
         this.id = id;
         this.user = user;
         this.password = password;
         this.nombre = nombre;
         this.telefono = telefono;
+        this.rol= rol;
     }
-
+    public void setRol(Rol rol){
+        this.rol=rol;
+    }
+    public Rol getRol(Rol rol){
+        return rol;
+    }
     public Usuario(){;}
 
     public Integer getId() {
