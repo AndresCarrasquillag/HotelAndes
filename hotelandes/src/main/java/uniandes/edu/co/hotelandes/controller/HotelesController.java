@@ -18,7 +18,7 @@ public class HotelesController {
 
     @GetMapping("/hoteles")
     public String hoteles(Model model){
-        model.addAttribute("hoteles", hotelRepository.darHoteles());
+        model.addAttribute("hotel", hotelRepository.darHoteles());
         return "hoteles";
     }
 
@@ -30,12 +30,12 @@ public class HotelesController {
     }
     @PostMapping("/hoteles/new/save")
     public String hotelGuardar(@ModelAttribute Hotel hotel){
-        hotelRepository.insertarHotel(hotel.getNombre() , hotel.getTelefono());
+        hotelRepository.insertarHotel(hotel.getNombre(), hotel.getTelefono());
         return "redirect:/hoteles";
     }
 
     @GetMapping("/hoteles/{id}/edit")
-    public String hotelEditarForm(@PathVariable("id") int id, Model model){
+    public String hotelEditarForm(@PathVariable("id") Integer id, Model model){
         Hotel hotel = hotelRepository.darHotel(id);
         if (hotel!=null){
             model.addAttribute("hotel", hotel);
@@ -46,9 +46,10 @@ public class HotelesController {
         }
     }
 
+
     @PostMapping("/hoteles/{id}/edit/save")
-    public String hotelEditarGuardar(@PathVariable("id") int id, @ModelAttribute Hotel hotel){
-        hotelRepository.actualizarHotel(id, hotel.getNombre(), hotel.getTelefono());
+    public String hotelEditarGuardar(@PathVariable("id") Integer id, @ModelAttribute Hotel hotel){
+        hotelRepository.actualizarHotel(id, hotel.getNombre(), ((Integer) hotel.getTelefono()));
         return "redirect:/hoteles";
 
     }
