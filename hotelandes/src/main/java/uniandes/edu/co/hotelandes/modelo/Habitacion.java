@@ -25,7 +25,7 @@ public class Habitacion {
     private Sede sede;
 
     @ManyToOne
-    @JoinColumn(name = "id_tipo", referencedColumnName = "nombre_tipo")
+    @JoinColumn(name = "id_tipo", referencedColumnName = "id")
     private TipoHabitacion tipoHabitacion;
 
     public Habitacion(Integer capacidad, Integer costo, Sede sede, TipoHabitacion tipoHabitacion) {
@@ -38,7 +38,7 @@ public class Habitacion {
     public void setTipoHabitacion(TipoHabitacion tipoHabitacion){
         this.tipoHabitacion = tipoHabitacion;
     }
-    public TipoHabitacion geTipoHabitacion(){
+    public TipoHabitacion getTipoHabitacion(){
         return tipoHabitacion;
     }
 
