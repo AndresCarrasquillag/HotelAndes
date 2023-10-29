@@ -24,14 +24,14 @@ public class TiposHabitacionController {
     }
 
     @GetMapping("/tiposHabitacion/new")
-    public String tiposHabitacionForm(Model model) {
+    public String tiposHabitacionesForm(Model model) {
         model.addAttribute("tipoHabitacion", new TipoHabitacion());
         return "tipoHabitacionNuevo";
     }
 
     @PostMapping("/tiposHabitacion/new/save")
     public String tipoHabitacionGuardar(@ModelAttribute TipoHabitacion tipoHabitacion) {
-        tipoHabitacionRepository.insertTipoHabitacion(tipoHabitacion.getDesripcion(), tipoHabitacion.getNombre_tipo());
+        tipoHabitacionRepository.insertTipoHabitacion(tipoHabitacion.getDescripcion(), tipoHabitacion.getNombre_tipo());
         return "redirect:/tiposHabitacion";
     }
 
@@ -49,7 +49,7 @@ public class TiposHabitacionController {
 
     @PostMapping("/tiposHabitaciones/{id}/edit/save")
     public String tiposHabitacionEditarGuardar(@PathVariable("id") Integer id, @ModelAttribute TipoHabitacion tipoHabitacion) {
-        tipoHabitacionRepository.updateTipoHabitacion(id, tipoHabitacion.getDesripcion(), tipoHabitacion.getNombre_tipo());
+        tipoHabitacionRepository.updateTipoHabitacion(id, tipoHabitacion.getDescripcion(), tipoHabitacion.getNombre_tipo());
         return "redirect:/tiposHabitaciones";
     }
 

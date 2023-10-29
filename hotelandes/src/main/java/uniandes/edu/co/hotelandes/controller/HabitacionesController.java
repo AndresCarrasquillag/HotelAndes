@@ -18,7 +18,7 @@ public class HabitacionesController {
     private HabitacionRepository habitacionRepository;
 
     @GetMapping("/habitaciones")
-    public String consumos(Model model) {
+    public String habitaciones(Model model) {
         model.addAttribute("habitaciones", habitacionRepository.darHabitaciones());
         return "habitaciones";
     }
@@ -40,7 +40,7 @@ public class HabitacionesController {
         Habitacion habitacion = habitacionRepository.darHabitacion(id);
         if (habitacion != null) {
             model.addAttribute("habitacion", habitacion);
-            return "habitacionEditar";
+            return "habitacionesEditar";
         }
 
         else {

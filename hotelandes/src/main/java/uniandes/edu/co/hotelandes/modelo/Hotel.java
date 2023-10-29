@@ -16,8 +16,8 @@ public class Hotel {
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sq_hoteles")
     private Integer id;
     private String nombre; 
-    private Integer telefono;
-    public Hotel(Integer id, String nombre, Integer telefono) {
+    private String telefono;
+    public Hotel(Integer id, String nombre, String telefono) {
         this.id = id;
         this.nombre = nombre;
         this.telefono = telefono;
@@ -38,10 +38,10 @@ public class Hotel {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-    public Integer getTelefono() {
+    public String getTelefono() {
         return telefono;
     }
-    public void setTelefono(Integer telefono) {
+    public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
     
