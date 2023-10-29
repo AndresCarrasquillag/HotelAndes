@@ -12,7 +12,7 @@ import jakarta.persistence.Table;
 public class Hotel {
 
     @Id
-    @SequenceGenerator(name = "sq_hoteles", sequenceName = "sq_hoteles", allocationSize = 1)
+    @SequenceGenerator(name = "sq_hoteles", sequenceName = "sq_hoteles",allocationSize = 1)
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sq_hoteles")
     private Integer id;
     private String nombre; 
