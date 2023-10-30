@@ -58,5 +58,24 @@ public class HabitacionesController {
     public String habitacionEliminar(@PathVariable("id") Integer id) {
         habitacionRepository.deleteHabitacion(id);
         return "redirect:/habitaciones";
+
+        
     }
+    @GetMapping("habitaciones/{id}/verIngresosForm")
+    public String habitacionVerIngresosForm(@PathVariable("id") Integer id, Model model) {
+        return "habitacionesIngresosForm";
+    }
+
+    @GetMapping("habitaciones/{id}/verIngresos/{fecha}")
+    public String habitacionVerIngresos(@PathVariable("id") Integer id, @PathVariable("fecha") String fecha, Model model) {
+        System.out.println("ID: " + id + ", Fecha: " + fecha);
+        Integer valorIngreso = habitacionRepository.darIngreso(id, fecha);
+        System.out.println("Ingreso: " + valorIngreso); 
+        model.addAttribute("ingreso", valorIngreso);
+
+        return "habitacionesIngresos";
+    }
+
+
 }
+

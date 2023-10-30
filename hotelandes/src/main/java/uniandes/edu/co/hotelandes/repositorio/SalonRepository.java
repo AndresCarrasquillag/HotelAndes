@@ -13,7 +13,7 @@ public interface SalonRepository extends JpaRepository<Salon, Integer> {
      @Query(value = "SELECT * FROM Salon", nativeQuery = true)
     Collection<Salon> darSalones();
 
-    @Query(value = "SELECT FROM Salon WHERE id= :id", nativeQuery = true)
+    @Query(value = "SELECT  * FROM Salon WHERE id= :id", nativeQuery = true)
     Salon darSalon(@Param("id") Integer id);
     
     @Modifying

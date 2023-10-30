@@ -14,7 +14,7 @@ public interface TiendaRepository extends JpaRepository<Tienda, Integer> {
      @Query(value = "SELECT * FROM Tienda", nativeQuery = true)
     Collection<Tienda> darTiendas();
 
-    @Query(value = "SELECT FROM Tienda WHERE id= :id", nativeQuery = true)
+    @Query(value = "SELECT * FROM Tienda WHERE id= :id", nativeQuery = true)
     Tienda darTienda(@Param("id") Integer id);
     
     @Modifying
