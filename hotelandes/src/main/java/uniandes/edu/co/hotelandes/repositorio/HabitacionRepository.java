@@ -2,8 +2,8 @@ package uniandes.edu.co.hotelandes.repositorio;
 
 import java.util.Collection;
 
-import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.transaction.annotation.Transactional;
@@ -15,9 +15,9 @@ public interface HabitacionRepository extends JpaRepository<Habitacion, Integer>
     @Query(value = "SELECT * FROM Habitaciones", nativeQuery = true)
     Collection<Habitacion> darHabitaciones();
     
-    @Query(value = "SELECT FROM Habitaciones WHERE id= :id", nativeQuery = true)
+    @Query(value = "SELECT * FROM Habitaciones WHERE id= :id", nativeQuery = true)
     Habitacion darHabitacion(@Param("id") Integer id);
-
+    
     @Modifying
     @Transactional
     @Query(value = "INSERT INTO Habitaciones (id, capacidad, costo) VALUES(1, :capacidad, :costo)", nativeQuery = true)
@@ -32,6 +32,9 @@ public interface HabitacionRepository extends JpaRepository<Habitacion, Integer>
     @Transactional
     @Query(value = "DELETE FROM Habitaciones WHERE id= :id", nativeQuery = true)
     void deleteHabitacion(@Param("id") Integer id);
+
+    @Query(value = "SELECT SUM(consumos.costo) FROM Habitaciones INNER JOIN Sedes ON :id = Sedes.id INNER JOIN servicios_en_sedes ON servicios_en_sedes.sede_id = sedes.id INNER JOIN consumos ON consumos.servicios_id = servicios_en_sedes.servicio_id WHERE consumos.fecha_de_pago <= TO_DATE(:fecha, 'YYYY-MM-DD')", nativeQuery = true)
+    Integer darIngreso(@Param("id") Integer id, @Param("fecha") String fecha);
 
 
 }
