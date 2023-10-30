@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar sede</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.min.css}"/>
+</head>
+<body>
+    
+    <form th:action="@{/sedes/+${id}+'/edit/save'}" th:object="${sede}"
+    method="post">
+    <div th:replace="~{fragments/sedeForm :: sedeForm(titulo='Editar sede', sede=${sede})}"></div>
+
+    </form>
+    
+</body>
+</html>

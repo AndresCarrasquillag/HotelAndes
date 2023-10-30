@@ -20,13 +20,13 @@ public interface SedeRepository extends JpaRepository<Sede, Integer> {
 
     @Modifying
     @Transactional
-    @Query(value = "INSERT INTO Sedes(id, nombre, telefono, direccion) VALUES(1, nombre= :nombre, telefono= :telefono, direccion= :direccion)", nativeQuery = true)
-    void insertSede(@Param("nombre") String nombre, @Param("telefono") Integer  string, @Param("direccion") String direccion);
+    @Query(value = "INSERT INTO Sedes(nombre, telefono, direccion) VALUES(:nombre, :telefono, :direccion)", nativeQuery = true)
+    void insertSede(@Param("nombre") String nombre, @Param("telefono") Integer telefono, @Param("direccion") String direccion);
 
     @Modifying
     @Transactional
-    @Query(value = "UPDATE Sedes SET nombre= :nombre, telefono= :telefono, direccion= :direccion WHERE id= :id", nativeQuery = true)
-    void updateSede(@Param("id") Integer id, @Param("nombre") String nombre, @Param("telefono") Integer  telefono, @Param("direccion") String direccion);
+    @Query(value = "UPDATE Sedes SET nombre = :nombre, telefono = :telefono, direccion = :direccion WHERE id = :id", nativeQuery = true)
+    void updateSede(@Param("id") Integer id, @Param("nombre") String nombre, @Param("telefono") Integer telefono, @Param("direccion") String direccion);
 
     @Modifying
     @Transactional

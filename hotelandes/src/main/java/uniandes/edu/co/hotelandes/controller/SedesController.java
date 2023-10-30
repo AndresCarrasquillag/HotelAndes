@@ -21,27 +21,26 @@ public class SedesController {
         model.addAttribute("sedes", sedeRepository.darSedes());
         return "sedes";
     }
-
+    
     @GetMapping("/sedes/new")
     public String sedeForm(Model model) {
-        model.addAttribute("sedes", new Sede());
+        model.addAttribute("sede", new Sede()); // Usa "sede" en lugar de "sedes"
         return "sedeNuevo";
     }
-
+    
     @PostMapping("/sedes/new/save")
     public String sedeGuardar(@ModelAttribute Sede sede) {
         sedeRepository.insertSede(sede.getNombre(), sede.getTelefono(), sede.getDireccion());
         return "redirect:/sedes";
     }
-
+    
     @GetMapping("/sedes/{id}/edit")
     public String sedeEditarForm(@PathVariable("id") Integer id, Model model) {
         Sede sede = sedeRepository.darSede(id);
         if (sede != null) {
             model.addAttribute("sede", sede);
-            return "sedesEditar";
-        }
-        else {
+            return "sedeEditar";
+        } else {
             return "redirect:/sedes";
         }
     }
