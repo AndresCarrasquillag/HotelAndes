@@ -33,8 +33,12 @@ public interface HabitacionRepository extends JpaRepository<Habitacion, Integer>
     @Query(value = "DELETE FROM Habitaciones WHERE id= :id", nativeQuery = true)
     void deleteHabitacion(@Param("id") Integer id);
 
-    @Query(value = "SELECT SUM(consumos.costo) FROM Habitaciones INNER JOIN Sedes ON :id = Sedes.id INNER JOIN servicios_en_sedes ON servicios_en_sedes.sede_id = sedes.id INNER JOIN consumos ON consumos.servicios_id = servicios_en_sedes.servicio_id WHERE consumos.fecha_de_pago <= TO_DATE(:fecha, 'YYYY-MM-DD')", nativeQuery = true)
-    Integer darIngreso(@Param("id") Integer id, @Param("fecha") String fecha);
+    @Query(value = "SELECT SUM(consumos.costo) FROM Habitaciones " +
+        "INNER JOIN Sedes ON :id = Sedes.id " +
+        "INNER JOIN servicios_en_sedes ON servicios_en_sedes.sede_id = Sedes.id " +
+        "INNER JOIN consumos ON consumos.servicios_id = servicios_en_sedes.servicio_id " +
+        "WHERE consumos.fecha_de_pago <= TO_DATE(:fecha, 'YYYY-MM-DD')", nativeQuery = true)
+Integer darIngreso(@Param("id") Integer id, @Param("fecha") String fecha);
 
 
 }
