@@ -38,7 +38,7 @@ public class SedesController {
     public String sedeEditarForm(@PathVariable("id") Integer id, Model model) {
         Sede sede = sedeRepository.darSede(id);
         if (sede != null) {
-            model.addAttribute("sedes", sede);
+            model.addAttribute("sede", sede);
             return "sedesEditar";
         }
         else {
