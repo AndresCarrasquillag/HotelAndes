@@ -21,8 +21,8 @@
             <input  class="form-control" type="text" id="direccion" 
             name="direccion" required th:value="${sede.direccion}" />
             <label  class="col-form-label">Hotel_id</label>
-            <input  class="form-control" type="text" id="hotel" 
-            name="hotels" required th:value="${sede.hotel}" />
+            <input  class="form-control" type="number" id="hotel" 
+            name="hotel" required th:value="${sede.hotel}" />
             <input type="submit" value="Guardar" class="btn btn-primary"/>
             <a th:href="@{/sedes}" class="btn btn btn-primary">Cancelar</a>
         </div>
