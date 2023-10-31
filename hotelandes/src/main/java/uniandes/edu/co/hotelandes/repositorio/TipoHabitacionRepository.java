@@ -2,7 +2,6 @@ package uniandes.edu.co.hotelandes.repositorio;
 
 
 import java.util.Collection;
-
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
@@ -16,7 +15,7 @@ public interface TipoHabitacionRepository extends JpaRepository<TipoHabitacion, 
     @Query(value = "SELECT * FROM Tipos_habitacion", nativeQuery = true)
     Collection<TipoHabitacion> darTiposHabitacion();
 
-    @Query(value = "SELECT FROM Tipos_habitacion WHERE id= :id", nativeQuery = true)
+    @Query(value = "SELECT * FROM Tipos_habitacion WHERE id= :id", nativeQuery = true)
     TipoHabitacion darTipoHabitacion(@Param("id") Integer id);
 
     @Modifying

@@ -7,7 +7,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
-import jakarta.persistence.OneToOne;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.SequenceGenerator;
 import jakarta.persistence.Table;
 
@@ -23,8 +23,8 @@ public class Consumo {
     private Date fecha_de_pago;
     private String descripcion;
 
-    @OneToOne
-    @JoinColumn(name = "Servicios", referencedColumnName = "id")
+    @ManyToOne
+    @JoinColumn(name = "Servicios_id", referencedColumnName = "id")
     private Servicio servicio;
 
     public Consumo(Integer id, Integer costo, Date fecha_de_pago, String descripcion, Servicio servicio) {

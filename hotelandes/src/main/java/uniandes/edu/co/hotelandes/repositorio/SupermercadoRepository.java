@@ -14,7 +14,7 @@ public interface SupermercadoRepository extends JpaRepository<Supermercado, Inte
     @Query(value = "SELECT * FROM Supermercado", nativeQuery = true)
     Collection<Supermercado> darSupermercados();
 
-    @Query(value = "SELECT FROM Supermercado WHERE id= :id", nativeQuery = true)
+    @Query(value = "SELECT * FROM Supermercado WHERE id= :id", nativeQuery = true)
     Supermercado darSupermercado(@Param("id") Integer id);
 
     @Modifying

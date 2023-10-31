@@ -15,7 +15,7 @@ public interface RolRepository extends JpaRepository<Rol, Integer> {
     @Query(value = "SELECT * FROM Roles", nativeQuery = true)
     Collection<Rol> darRoles();
 
-    @Query(value = "SELECT FROM Roles WHERE id= :id", nativeQuery = true)
+    @Query(value = "SELECT * FROM Roles WHERE id= :id", nativeQuery = true)
     Rol darRol(@Param("id") Integer id);
     
     @Modifying

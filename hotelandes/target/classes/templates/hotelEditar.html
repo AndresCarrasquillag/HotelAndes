@@ -11,20 +11,9 @@
     <div class="container mt-5">
         <h2>Editar Hotel</h2>
         <form th:action="@{'/hoteles/' + ${hotel.id} + '/edit/save'}" th:object="${hotel}" method="post">
-            <input type="hidden" th:field="*{id}" />
-    
-            <div class="mb-3">
-                <label for="nombre" class="form-label">Nombre</label>
-                <input type="text" class="form-control" id="nombre" th:field="*{nombre}" required>
+            <div th:replace="~{fragments/hotelForm :: hotelForm(titulo='Editar hotel', hotel=${hotel})}">
+                
             </div>
-    
-            <div class="mb-3">
-                <label for="telefono" class="form-label">Teléfono</label>
-                <input type="number" class="form-control" id="telefono" th:field="*{telefono}" required>
-            </div>
-    
-            <button type="submit" class="btn btn-primary">Guardar Cambios</button>
-            <a href="/hotelandes/hoteles" class="btn btn-secondary">Cancelar</a>
         </form>
     </div>
     
