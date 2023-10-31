@@ -1,7 +1,4 @@
 package uniandes.edu.co.hotelandes.controller;
-
-import java.util.Collection;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -9,10 +6,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-
 import uniandes.edu.co.hotelandes.modelo.Consumo;
 import uniandes.edu.co.hotelandes.repositorio.ConsumoRepository;
-import uniandes.edu.co.hotelandes.repositorio.ConsumoRepository.RespInfoConsumos;
 
 @Controller
 public class ConsumosController {
@@ -24,7 +19,6 @@ public class ConsumosController {
     public String serviciosPopulares(Model model) {
         //Collection<RespInfoConsumos> frec = consumoRepository.darServiciosPopulares();
         model.addAttribute("populares", consumoRepository.darServiciosPopulares());
-        model.addAttribute("serv_id", consumoRepository.darServiciosPopulares());
         return "serviciosPopulares";
     }
 
