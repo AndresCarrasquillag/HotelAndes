@@ -16,23 +16,21 @@
                     <th>usuario</th>
                     <th>checkIn</th>
                     <th>checkOut</th>
-                    <th>horario de servicio</th>
-                    <th>costo</th>
+                    
 
                 </tr>
             </thead>
             <tbody>
-                <tr th:each="alojamiento : ${Alojamientos}">
+                <tr th:each="alojamiento : ${alojamientos}">
                     <td th:text="${alojamiento.pk.id.id}"></td>
                     <td th:text="${alojamiento.usuario_alojamiento_id}"></td>
                     <td th:text="${alojamiento.check_in_alojamiento_id}"></td>
                     <td th:text="${alojamiento.check_out_alojamiento_id}"></td>
-                    <td th:text="${alojamiento.pk.id.horario_de_servicio}"></td>
-                    <td th:text="${alojamiento.pk.id.costo}"></td>
+                    
 
                     <td>
-                        <a th:href="@{'/alojamientos/'+${Alojamiento.id}+'/edit'}" class="btn btn-warning btn-sm">Editar</a>
-                        <a th:href="@{'/alojamientos/'+${Alojamiento.id}+'/delete'}" class="btn btn-danger btn-sm" onclick="return confirm('¿Seguro de borrar el alojamiento?')">Borrar</a>
+                        <a th:href="@{'/alojamientos/'+${alojamiento.id}+'/edit'}" class="btn btn-warning btn-sm">Editar</a>
+                        <a th:href="@{'/alojamientos/'+${alojamiento.id}+'/delete'}" class="btn btn-danger btn-sm" onclick="return confirm('¿Seguro de borrar el alojamiento?')">Borrar</a>
                     </td>
                 </tr>
             </tbody>
