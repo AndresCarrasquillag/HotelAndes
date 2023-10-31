@@ -13,13 +13,13 @@
         <form>
             <label  class="col-form-label">Nombre</label>
             <input  class="form-control" type="text" id="nombre" 
-            name="nombre" required th:value="${sedes.nombre}" />
+            name="nombre" required th:value="${sede.nombre}" />
             <label  class="col-form-label">Telefono</label>
             <input  class="form-control" type="number" id="telefono" 
-            name="telefono" required th:value="${sedes.telefono}" />
+            name="telefono" required th:value="${sede.telefono}" />
             <label  class="col-form-label">Dirección</label>
             <input  class="form-control" type="text" id="direccion" 
-            name="direccion" required th:value="${sedes.direccion}" />
+            name="direccion" required th:value="${sede.direccion}" />
         <div class="text-center">
             <input type="submit" value="Guardar" class="btn btn-primary"/>
             <a th:href="@{/sedes}" class="btn btn btn-primary">Cancelar</a>
