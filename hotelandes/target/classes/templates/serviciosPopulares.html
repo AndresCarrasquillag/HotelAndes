@@ -11,8 +11,21 @@
         <div class="row">
             <div class="col-md-12">
                 <h2>20 servicios mas populares:</h2>
-                <div class="alert alert-info">
-                    <strong th:text="${populares.frecuencia}"></strong>
+                <div>
+                    <table class="table table-hover">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>id Servicio</th>
+                                <th>frecuencia</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr th:each="coso :${populares}">
+                                <td th:text="${coso.getservicios_id}"></td>
+                                <td th:text="${coso.getFRECUENCIA()}"></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
