@@ -10,25 +10,13 @@
     
     <div class="container mt-5">
         <h2>Crear carta</h2>
-        <form th:action="@{'/cartas/' +'/new'}" th:object="${producto}" method="post">
-            <input type="hidden" th:field="*{id}" />
-    
-            <div class="mb-3">
-                <label class="form-label">Id de la carta nueva</label>
-                <input type="text" class="form-control" th:field="*{id}" required>
-            </div>
-    
-            <div class="mb-3">
-                <label class="form-label">Añadir id de bar</label>
-                <input type="number" class="form-control" th:field="*{costo}" required>
-            </div>
-            <div class="mb-3">
-                <label class="form-label">Añadir id de restaurante</label>
-                <input type="number" class="form-control" th:field="*{costo}" required>
-            </div>
+        <form th:action="@{'/cartas/new/save'}" th:object="${carta}" method="post">
+            <input type="hidden"/>
+
+           
     
             <button type="submit" class="btn btn-primary">Guardar Cambios</button>
-            <a href="/hotelandes/productos" class="btn btn-secondary">Cancelar</a>
+            <a href="/hotelandes/cartas" class="btn btn-secondary">Cancelar</a>
         </form>
     </div>
     

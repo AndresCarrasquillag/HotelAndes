@@ -16,6 +16,13 @@ public class CartasController {
     @Autowired
     private CartaRepository cartaRepository;
 
+@PostMapping("/cartas/new/save")
+public String cartaGuardar(@ModelAttribute Carta carta){
+    cartaRepository.save(carta); 
+    return "redirect:/cartas";
+}
+
+    
     @GetMapping("/cartas")
     public String cartas(Model model){
         model.addAttribute("cartas", cartaRepository.darCartas());
@@ -27,11 +34,7 @@ public class CartasController {
         model.addAttribute("carta", new Carta());
         return "cartaNuevo";
     }
-    @PostMapping("/cartas/new/save")
-    public String cartaGuardar(@ModelAttribute Carta carta){
-        cartaRepository.insertarCarta(carta.getNombre());
-        return "redirect:/cartas";
-    }
+    
 
     @GetMapping("/cartas/{id}/edit")
     public String cartaEditarForm(@PathVariable("id") int id, Model model){
@@ -45,12 +48,6 @@ public class CartasController {
         }
     }
 
-    @PostMapping("/cartas/{id}/edit/save")
-    public String cartaEditarGuardar(@PathVariable("id") int id, @ModelAttribute Carta carta){
-        cartaRepository.actualizarCarta(id, carta.getNombre());
-        return "redirect:/cartas";
-
-    }
 
 
     @GetMapping("/cartas/{id}/delete")
@@ -58,10 +55,6 @@ public class CartasController {
         cartaRepository.eliminarCarta(id);
         return "redirect:/cartas";
     }
-
-
-
-
 
 
 }

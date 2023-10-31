@@ -1,6 +1,6 @@
 package uniandes.edu.co.hotelandes.repositorio;
 import java.util.Collection;
-import org.springframework.data.jdbc.repository.query.Modifying;
+import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
@@ -14,7 +14,7 @@ public interface SupermercadoRepository extends JpaRepository<Supermercado, Inte
     @Query(value = "SELECT * FROM Supermercado", nativeQuery = true)
     Collection<Supermercado> darSupermercados();
 
-    @Query(value = "SELECT FROM Supermercado WHERE id= :id", nativeQuery = true)
+    @Query(value = "SELECT * FROM Supermercado WHERE id= :id", nativeQuery = true)
     Supermercado darSupermercado(@Param("id") Integer id);
 
     @Modifying

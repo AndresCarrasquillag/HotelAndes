@@ -12,12 +12,12 @@ import jakarta.persistence.Table;
 public class Hotel {
 
     @Id
-    @SequenceGenerator(name = "sq_hoteles", sequenceName = "sq_hoteles", allocationSize = 1)
+    @SequenceGenerator(name = "sq_hoteles", sequenceName = "sq_hoteles",allocationSize = 1)
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sq_hoteles")
     private Integer id;
     private String nombre; 
-    private String telefono;
-    public Hotel(Integer id, String nombre, String telefono) {
+    private Integer telefono;
+    public Hotel(Integer id, String nombre, Integer telefono) {
         this.id = id;
         this.nombre = nombre;
         this.telefono = telefono;
@@ -38,10 +38,10 @@ public class Hotel {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-    public String getTelefono() {
+    public Integer getTelefono() {
         return telefono;
     }
-    public void setTelefono(String telefono) {
+    public void setTelefono(Integer telefono) {
         this.telefono = telefono;
     }
     

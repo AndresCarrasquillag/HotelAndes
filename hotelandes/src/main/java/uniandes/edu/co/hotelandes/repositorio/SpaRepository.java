@@ -14,7 +14,7 @@ public interface SpaRepository extends JpaRepository<Spa, Integer> {
       @Query(value = "SELECT * FROM Spa", nativeQuery = true)
     Collection<Spa> darSpas();
 
-    @Query(value = "SELECT FROM Spa WHERE id= :id", nativeQuery = true)
+    @Query(value = "SELECT * FROM Spa WHERE id= :id", nativeQuery = true)
     Spa darSpa(@Param("id") Integer id);
 
     @Modifying
