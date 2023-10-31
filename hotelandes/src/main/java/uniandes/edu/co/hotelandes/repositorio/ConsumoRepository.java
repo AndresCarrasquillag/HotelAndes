@@ -15,6 +15,10 @@ public interface ConsumoRepository extends JpaRepository<Consumo, Integer> {
     @Query(value = "SELECT * FROM Consumos", nativeQuery = true)
     Collection<Consumo> darConsumos();
 
+    @Query(value = "SELECT COUNT(*) as frecuencia FROM Consumos GROUP BY servicios_id ORDER BY frecuencia DESC FETCH FIRST 20 ROWS ONLY", nativeQuery = true)
+    Collection<Consumo> darServiciosPopulares();
+
+
     @Query(value = "SELECT FROM Consumos WHERE id= :id", nativeQuery = true)
     Consumo darConsumo(@Param("id") Integer id);
 

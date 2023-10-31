@@ -17,6 +17,12 @@ public class ConsumosController {
     @Autowired
     private ConsumoRepository consumoRepository;
 
+    @GetMapping("/serviciosPopulares")
+    public String serviciosPopulares(Model model) {
+        model.addAttribute("populares", consumoRepository.darServiciosPopulares());
+        return "serviciosPopulares";
+    }
+
     @GetMapping("/consumos")
     public String consumos(Model model) {
         model.addAttribute("consumos", consumoRepository.darConsumos());
