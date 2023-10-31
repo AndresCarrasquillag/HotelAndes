@@ -30,7 +30,7 @@ public class SedesController {
     
     @PostMapping("/sedes/new/save")
     public String sedeGuardar(@ModelAttribute Sede sede) {
-        sedeRepository.insertSede(sede.getNombre(), sede.getTelefono(), sede.getDireccion());
+        sedeRepository.insertSede(sede.getNombre(), sede.getTelefono(), sede.getDireccion(), sede.getHotel().getId());
         return "redirect:/sedes";
     }
     
@@ -47,7 +47,7 @@ public class SedesController {
 
     @PostMapping("/sedes/{id}/edit/save")
     public String sedeEditarGuardar(@PathVariable("id") Integer id, @ModelAttribute Sede sede) {
-        sedeRepository.updateSede(id, sede.getNombre(), sede.getTelefono(), sede.getDireccion());
+        sedeRepository.updateSede(id, sede.getNombre(), sede.getTelefono(), sede.getDireccion(), sede.getHotel().getId());
         return "redirect:/sedes";
     }
 

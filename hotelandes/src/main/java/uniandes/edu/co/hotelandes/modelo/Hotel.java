@@ -44,6 +44,9 @@ public class Hotel {
     public void setTelefono(Integer telefono) {
         this.telefono = telefono;
     }
-    
+    @Override
+    public String toString() {
+        return ""+getId();
+    }    
     
 }

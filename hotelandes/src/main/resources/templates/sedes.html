@@ -29,7 +29,7 @@
                     <td th:text="${sede.nombre}"></td>
                     <td th:text="${sede.telefono}"></td>
                     <td th:text="${sede.direccion}"></td>
-                    <td th:text="${sede.hotel.nombre}"></td>
+                    <td th:text="${sede.hotel}"></td>
                     <td>
                         <a th:href="@{'/sedes/' + ${sede.id} + '/edit'}"class="btn btn-warning btn-sm">Editar</a>
                         <a th:href="@{'/sedes/'+${sede.id}+'/delete'}" class="btn btn-danger btn-sm" onclick="return confirm('¿Seguro de borrar la sede?')">Borrar</a>

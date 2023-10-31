@@ -10,12 +10,12 @@ import jakarta.persistence.SequenceGenerator;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "Sede")
+@Table(name = "Sedes")
 public class Sede {
     
     @Id
-    @SequenceGenerator(name = "sq_sede", sequenceName = "sq_sede", allocationSize = 1)
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sq_sede")
+    @SequenceGenerator(name = "sq_sedes", sequenceName = "sq_sedes", allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sq_sedes")
     private Integer id;
     private String nombre;
     private Integer telefono;
