@@ -32,3 +32,7 @@ public interface ProductoRepository extends JpaRepository<Producto, Integer>{
     @Query(value = "DELETE FROM productos WHERE id=:id", nativeQuery = true)
     void eliminarProducto(@Param("id") Integer id);
 }
+
+
+
+   

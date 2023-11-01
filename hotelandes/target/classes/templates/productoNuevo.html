@@ -3,14 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Editar Hotel</title>
+    <title>Crear producto</title>
     <link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.min.css}"/>
 </head>
 <body>
-    
-    <form th:action="@{'/hoteles/' + ${hotel.id} + '/edit/save'}" th:object="${hotel}" method="post">
-        <div th:replace="~{fragments/hotelForm :: hotelForm(titulo='Editar hotel', hotel=${hotel})}">
+    <form action="#" th:action="@{/productos/new/save}" method="post">
+        <div th:replace="~{fragments/productoForm :: productoForm(titulo='Crear producto')}"></div>
     </form>
-    
 </body>
 </html>

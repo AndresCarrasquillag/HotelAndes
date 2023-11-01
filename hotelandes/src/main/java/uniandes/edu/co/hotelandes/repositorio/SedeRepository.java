@@ -8,7 +8,6 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
 import jakarta.transaction.Transactional;
-import uniandes.edu.co.hotelandes.modelo.Hotel;
 import uniandes.edu.co.hotelandes.modelo.Sede;
 
 public interface SedeRepository extends JpaRepository<Sede, Integer> {
