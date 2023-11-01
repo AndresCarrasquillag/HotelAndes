@@ -48,11 +48,11 @@ public class PlanDeConsumoController {
     }
     @PostMapping("/planesDeConsumo/{id}/edit/save")
     public String planesDeConsumoEditarGuardar(@PathVariable("id") Integer id, @ModelAttribute PlanesDeConsumo planesDeConsumo) {
-        planDeConsumoRepository.updatePlanDeConsumo(id, planesDeConsumo.getNombre(), planesDeConsumo.getDescripcion(), planesDeConsumo.getDescuento());
+        planDeConsumoRepository.updatePlanDeConsumo(id, planesDeConsumo.getNombre(), planesDeConsumo.getDescripcion(), planesDeConsumo.getDescuento(),  planesDeConsumo.getHotel().getId());
         return "redirect:/planesDeConsumo";
     }
 
-    @PostMapping("/planesDeConsumo/{id}/delete")
+    @GetMapping("/planesDeConsumo/{id}/delete")
     public String planDeConsumoEliminar(@PathVariable("id") Integer id) {
         planDeConsumoRepository.deletePlanesDeConsumo(id);
         return "redirect:/planesDeConsumo";
