@@ -40,7 +40,6 @@ public class SupermercadoController {
 
     @PostMapping("/supermercados/new/save")
     public String supermercadoGuardar(@ModelAttribute Supermercado supermercado) {
-        servicioRepository.insertServicio("TO_DATE('2023-12-12', 'DD-MM-YYYY')", 0, "supermercado");
         supermercadoRepository.insertarSupermercado(supermercado.getNombre());
         return "redirect:/supermercados";
     }
