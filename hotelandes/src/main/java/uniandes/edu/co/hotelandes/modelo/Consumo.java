@@ -24,7 +24,7 @@ public class Consumo {
     private String descripcion;
 
     @ManyToOne
-    @JoinColumn(name = "Servicios_id", referencedColumnName = "id")
+    @JoinColumn(name = "Servicios_id", referencedColumnName = "Id")
     private Servicio servicio;
 
     public Consumo(Integer id, Integer costo, Date fecha_de_pago, String descripcion, Servicio servicio) {

@@ -12,11 +12,18 @@ import uniandes.edu.co.hotelandes.modelo.Consumo;
 
 public interface ConsumoRepository extends JpaRepository<Consumo, Integer> {
 
+    public interface RespInfoConsumos {
+        int getFRECUENCIA();
+        int getservicios_id();
+    }
+
     @Query(value = "SELECT * FROM Consumos", nativeQuery = true)
     Collection<Consumo> darConsumos();
 
-    @Query(value = "SELECT COUNT(*) as frecuencia FROM Consumos GROUP BY servicios_id ORDER BY frecuencia DESC FETCH FIRST 20 ROWS ONLY", nativeQuery = true)
-    Collection<Consumo> darServiciosPopulares();
+
+
+    @Query(value = "SELECT servicios_id, COUNT(*) as frecuencia FROM Consumos GROUP BY servicios_id ORDER BY frecuencia DESC FETCH FIRST 20 ROWS ONLY", nativeQuery = true)
+    Collection<RespInfoConsumos> darServiciosPopulares();
 
 
     @Query(value = "SELECT FROM Consumos WHERE id= :id", nativeQuery = true)
