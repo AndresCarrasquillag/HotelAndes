@@ -13,8 +13,10 @@ import uniandes.edu.co.hotelandes.modelo.Consumo;
 public interface ConsumoRepository extends JpaRepository<Consumo, Integer> {
 
     public interface RespInfoConsumos {
+        int getSuma();
         int getFRECUENCIA();
         int getservicios_id();
+        int getid_usuario();
     }
 
     
@@ -53,5 +55,8 @@ public interface ConsumoRepository extends JpaRepository<Consumo, Integer> {
 
     @Query(value = "SELECT SUM(consumos.costo) FROM CONSUMOS WHERE consumos.habitacion_id=:id AND consumos.fecha_de_pago BETWEEN TRUNC(SYSDATE , 'Year') AND SYSDATE", nativeQuery = true)
     Integer darIngreso(@Param("id") Integer id);
+
+    @Query(value = "SELECT CONSUMOS.ID_USUARIO, SUM(consumos.costo) AS suma FROM CONSUMOS WHERE CONSUMOS.FECHA_DE_PAGO BETWEEN ADD_MONTHS(SYSDATE, -12) AND SYSDATE GROUP BY CONSUMOS.ID_USUARIO HAVING SUM(consumos.costo)>100", nativeQuery = true)
+    Collection<RespInfoConsumos> darBuenosClientesPorConsumo();
 
 }

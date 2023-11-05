@@ -15,6 +15,12 @@ public class ConsumosController {
     @Autowired
     private ConsumoRepository consumoRepository;
 
+    @GetMapping("/buenosClientesConsumo")
+    public String buenosClientesPorConsumo(Model model) {
+        model.addAttribute("buenosClientes", consumoRepository.darBuenosClientesPorConsumo());
+        return "buenosClientesPorConsumo";
+    }
+
     @GetMapping("/serviciosPopulares")
     public String serviciosPopulares(Model model) {
         //Collection<RespInfoConsumos> frec = consumoRepository.darServiciosPopulares();
@@ -84,5 +90,7 @@ public class ConsumosController {
 
         return "habitacionesIngresos";
     }
+
+
 
 }
