@@ -29,9 +29,9 @@ public class Habitacion {
     private TipoHabitacion tipoHabitacion;
 
     public Habitacion(Integer capacidad, Integer costo, Sede sede, TipoHabitacion tipoHabitacion) {
-        this.sede = sede;
         this.capacidad = capacidad;
         this.costo = costo;
+        this.sede = sede;
         this.tipoHabitacion = tipoHabitacion;
 
     }

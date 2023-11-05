@@ -19,12 +19,12 @@ public interface SupermercadoRepository extends JpaRepository<Supermercado, Inte
 
     @Modifying
     @Transactional
-    @Query(value = "INSERT INTO Supermercado(id, nombre) VALUES(1, :nombre)", nativeQuery = true)
-    void insertarSupermercado(@Param("nombre") String string);
+    @Query(value = "INSERT INTO Supermercado(id, nombre) VALUES(SQ_SUPERMERCADO.NEXTVAL, :nombre)", nativeQuery = true)
+    void insertarSupermercado(@Param("nombre") String nombre);
 
     @Modifying
     @Transactional
-    @Query(value = "UPDATE Supermercado nombre= :nombre WHERE id= :id", nativeQuery = true)
+    @Query(value = "UPDATE Supermercado SET nombre= :nombre WHERE id= :id", nativeQuery = true)
     void updateSupermercado(@Param("id") Integer id, @Param("nombre") String nombre);
 
     @Modifying
@@ -33,3 +33,4 @@ public interface SupermercadoRepository extends JpaRepository<Supermercado, Inte
     void deleteSupermercado(@Param("id") Integer id);
 
 }
+
