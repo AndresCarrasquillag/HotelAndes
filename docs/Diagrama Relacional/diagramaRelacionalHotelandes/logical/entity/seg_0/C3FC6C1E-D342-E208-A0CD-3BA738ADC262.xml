@@ -1,0 +1,60 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="C3FC6C1E-D342-E208-A0CD-3BA738ADC262" name="Bar">
+<createdBy>carra</createdBy>
+<createdTime>2023-09-30 04:30:47 UTC</createdTime>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<engineerTo>
+<item key="498F6BEF-FBC9-B6E6-9BE3-70E81F68FA05" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<hierarchicalParent>66F51FEA-8901-D4A2-FEEB-646C72BC8E0A</hierarchicalParent>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="estilo" id="B1FA794B-9941-C70D-FA21-EE6B2B2D2F07">
+<createdBy>carra</createdBy>
+<createdTime>2023-09-30 04:31:00 UTC</createdTime>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<engineerTo>
+<item key="498F6BEF-FBC9-B6E6-9BE3-70E81F68FA05" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id" id="2BBEE579-6C2D-DD2E-581D-913A40A3B8F0">
+<createdBy>Administrator</createdBy>
+<createdTime>2023-10-01 14:01:13 UTC</createdTime>
+<generatorID>ED876558-484D-E864-D5E1-8FF8C2469FB3</generatorID>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<engineerTo>
+<item key="498F6BEF-FBC9-B6E6-9BE3-70E81F68FA05" value="true"/>
+</engineerTo>
+<referedAttribute>0C561EF2-AAD9-9280-6C4F-2AFC32B7F888</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id1" id="CDA25BD9-020F-76D7-2365-29ACCE87B29B">
+<createdBy>Administrator</createdBy>
+<createdTime>2023-10-01 14:02:39 UTC</createdTime>
+<generatorID>63F7FC12-060D-ABA1-83F1-B3AC2AD267FD</generatorID>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<engineerTo>
+<item key="498F6BEF-FBC9-B6E6-9BE3-70E81F68FA05" value="true"/>
+</engineerTo>
+<referedAttribute>9C2AFAF3-8614-95B7-C040-81660C869A76</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+</Entity>

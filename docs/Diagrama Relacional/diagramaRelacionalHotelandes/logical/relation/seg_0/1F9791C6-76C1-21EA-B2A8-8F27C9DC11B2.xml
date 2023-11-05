@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Habitaciones Tipos habitacion FK" directorySegmentName="seg_0" id="1F9791C6-76C1-21EA-B2A8-8F27C9DC11B2">
+<createdBy>carra</createdBy>
+<createdTime>2023-09-25 00:59:57 UTC</createdTime>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<engineerTo>
+<item key="498F6BEF-FBC9-B6E6-9BE3-70E81F68FA05" value="true"/>
+</engineerTo>
+<sourcePk>E4BAF58F-A579-1ACB-0CBB-D3EB4F2CD343</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>F8EC42A9-9DB7-1EAE-D3C3-244BA91010B9</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>B24F7E3E-A0A5-380C-8065-AF607571CD26</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

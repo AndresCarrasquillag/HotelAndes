@@ -1,0 +1,74 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="B26EB597-C1F4-2BD0-4F44-F0AA1861B693" name="Cartas">
+<createdBy>carra</createdBy>
+<createdTime>2023-09-25 03:00:33 UTC</createdTime>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<engineerTo>
+<item key="498F6BEF-FBC9-B6E6-9BE3-70E81F68FA05" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="0C561EF2-AAD9-9280-6C4F-2AFC32B7F888">
+<createdBy>carra</createdBy>
+<createdTime>2023-09-25 03:00:40 UTC</createdTime>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<engineerTo>
+<item key="498F6BEF-FBC9-B6E6-9BE3-70E81F68FA05" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id1" id="5DD59CAD-0D88-0BCF-E692-1C4150A4A497">
+<createdBy>Administrator</createdBy>
+<createdTime>2023-10-01 14:00:17 UTC</createdTime>
+<generatorID>ED876558-484D-E864-D5E1-8FF8C2469FB3</generatorID>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<engineerTo>
+<item key="498F6BEF-FBC9-B6E6-9BE3-70E81F68FA05" value="true"/>
+</engineerTo>
+<referedAttribute>AE58D664-A294-F33C-45AC-F08DF252576F</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id2" id="5292DD06-BD38-9E16-2915-A4EB0F267075">
+<createdBy>Administrator</createdBy>
+<createdTime>2023-10-01 14:03:10 UTC</createdTime>
+<generatorID>9B591949-B1B6-BCF5-118B-62B75A5BAC63</generatorID>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<engineerTo>
+<item key="498F6BEF-FBC9-B6E6-9BE3-70E81F68FA05" value="true"/>
+</engineerTo>
+<referedAttribute>AE58D664-A294-F33C-45AC-F08DF252576F</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="4EF6F0CE-B571-DA00-9D5D-CA6960689251" name="Cartas PK">
+<createdBy>carra</createdBy>
+<createdTime>2023-09-25 03:00:53 UTC</createdTime>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="498F6BEF-FBC9-B6E6-9BE3-70E81F68FA05" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>0C561EF2-AAD9-9280-6C4F-2AFC32B7F888</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

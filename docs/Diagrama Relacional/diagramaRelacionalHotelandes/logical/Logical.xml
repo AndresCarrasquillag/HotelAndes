@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<LogicalDesign class="oracle.dbtools.crest.model.design.logical.LogicalDesign" name="Logical" id="4ECB75B2-4521-D19D-2B38-FE6CF813B113" mainViewID="3161067B-52CD-190A-F24A-C899737B79B8">
+<createdBy>carra</createdBy>
+<createdTime>2023-09-24 23:41:18 UTC</createdTime>
+<ownerDesignName>modelo proy sistrans</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</LogicalDesign>

@@ -14,12 +14,12 @@ public interface UsuarioRepository extends JpaRepository<Usuario, Integer> {
     @Query(value = "SELECT * FROM Usuarios", nativeQuery = true)
     Collection<Usuario> darUsuarios();
 
-    @Query(value = "SELECT FROM Usuarios WHERE id= :id", nativeQuery = true)
+    @Query(value = "SELECT ID, user, PASSWORD, NOMBRE, TELEFONO, ROLES_ID_ROL, ALOJAMIENTO_ID1 FROM Usuarios WHERE id= :id", nativeQuery = true)
     Usuario darUsuario(@Param("id") Integer id);
 
     @Modifying
     @Transactional
-    @Query(value = "INSERT INTO Usuarios(id, user, password, nombre, telefono) VALUES(Hotelandes_sequence.nextval, :user, :password, :nombre, :telefono)", nativeQuery = true)
+    @Query(value = "INSERT INTO Usuarios(id, user, password, nombre, telefono) VALUES(1, :user, :password, :nombre, :telefono)", nativeQuery = true)
     void insertUsuario(@Param("user") String user, @Param("password") String password, @Param("nombre") String nombre, @Param("telefono") String telefono);
 
     @Modifying

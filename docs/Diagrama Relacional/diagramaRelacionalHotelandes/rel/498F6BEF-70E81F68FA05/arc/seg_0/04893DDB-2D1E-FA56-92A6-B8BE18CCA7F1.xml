@@ -1,0 +1,22 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKArc class="oracle.dbtools.crest.model.design.relational.FKArc" directorySegmentName="seg_0" id="04893DDB-2D1E-FA56-92A6-B8BE18CCA7F1" name="FKArc_1">
+<createdBy>carra</createdBy>
+<createdTime>2023-09-30 04:42:22 UTC</createdTime>
+<ownerDesignName>SISTRANSMODELER</ownerDesignName>
+<mandatory>false</mandatory>
+<reverseArc>true</reverseArc>
+<table>45564F65-F077-456D-F851-95FBC8FFE380</table>
+<fkeys>
+<fkeyID>3960155C-A150-00C8-EDAE-88D24617DE5A</fkeyID>
+<fkeyID>F8ED8933-3D71-1F4E-B2A0-614336A65C66</fkeyID>
+<fkeyID>9569B2F4-9E8F-F2A6-805E-BFF6FE41C75E</fkeyID>
+<fkeyID>2786FAA5-8201-ABC9-657D-2ABC8FCDCF4E</fkeyID>
+<fkeyID>0C5D7745-5361-C298-77EF-195E9AED065D</fkeyID>
+<fkeyID>3E41457A-E7AB-AB7E-0C8E-82791AE0FAE7</fkeyID>
+<fkeyID>6657B075-2558-02B7-FB20-BA35196B5E1F</fkeyID>
+<fkeyID>AFC943C0-FDF4-1597-6B77-4B1186937EE3</fkeyID>
+<fkeyID>5DD10FC7-112F-F694-FF21-1FACDB3C991A</fkeyID>
+<fkeyID>1C375178-3785-0FFC-7E17-40218446AC40</fkeyID>
+<fkeyID>15190ABF-1214-98AA-638C-D1DF5D2994DC</fkeyID>
+</fkeys>
+</FKArc>

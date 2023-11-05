@@ -1,0 +1,118 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="DE148513-7FD8-048F-5205-89EFC877DBBF" name="Consumos">
+<createdBy>carra</createdBy>
+<createdTime>2023-09-25 02:07:03 UTC</createdTime>
+<generatorID>D86605EF-FCBE-F7D8-7CBC-59926C0C79AC</generatorID>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="D6ABE2FF-3FC0-0E79-5D9B-051A50F07595">
+<createdBy>carra</createdBy>
+<createdTime>2023-09-25 02:07:03 UTC</createdTime>
+<generatorID>9C2AFAF3-8614-95B7-C040-81660C869A76</generatorID>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="costo" id="0D968653-3AC9-7E64-902B-7B37C5A719CE">
+<createdBy>carra</createdBy>
+<createdTime>2023-09-25 02:07:03 UTC</createdTime>
+<generatorID>5FB4EBA7-9E3E-B52A-9597-F5FD620B6ED7</generatorID>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fecha_de_pago" id="B22DCD0E-FB47-0C88-5906-172201490BCE">
+<createdBy>carra</createdBy>
+<createdTime>2023-09-25 02:07:03 UTC</createdTime>
+<generatorID>0F2632F7-2C67-64BD-A8A2-F030170A81D5</generatorID>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Servicios_id" id="5D4E22D0-0B71-D434-981C-A6E57A278618">
+<createdBy>carra</createdBy>
+<createdTime>2023-09-25 02:07:03 UTC</createdTime>
+<generatorID>9A08B9D4-52F3-3769-440C-345778260281</generatorID>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="CC4B7E51-2DD1-A1DA-0C42-CB61A74FE921" referredColumn="360A5CBB-9959-BF25-2E46-600E8843EAB0"/>
+</associations>
+</Column>
+<Column name="descripcion" id="366877C4-B9D2-16DA-541C-89DF6A021D22">
+<createdBy>carra</createdBy>
+<createdTime>2023-09-30 20:06:20 UTC</createdTime>
+<generatorID>86A3011D-9B07-9647-6E35-06655D18BDE1</generatorID>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Cuentas_id" id="B71BC99A-69F5-6173-C3FD-074F211B41CA">
+<createdBy>Administrator</createdBy>
+<createdTime>2023-10-01 14:55:46 UTC</createdTime>
+<generatorID>D5C86613-3B7F-6F2D-94A9-56CB037DDE06</generatorID>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="268AE95A-E674-8CD4-1B07-8648FD3FBC19" name="Consumos_PK">
+<createdBy>carra</createdBy>
+<createdTime>2023-09-25 02:07:03 UTC</createdTime>
+<generatorID>365722A4-D44C-D141-A2BC-340DAB11A4CB</generatorID>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D6ABE2FF-3FC0-0E79-5D9B-051A50F07595"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6E32EBA4-7615-6F8E-2BB2-5A8EC23041C1" name="Consumo__IDX">
+<createdBy>carra</createdBy>
+<createdTime>2023-09-25 02:07:03 UTC</createdTime>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>63F7FC12-060D-ABA1-83F1-B3AC2AD267FD</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="5D4E22D0-0B71-D434-981C-A6E57A278618"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8DB1868B-8C34-CB31-3598-D272FF83573D" name="Consumos_Servicios_FK">
+<createdBy>carra</createdBy>
+<createdTime>2023-09-25 02:07:03 UTC</createdTime>
+<generatorID>63F7FC12-060D-ABA1-83F1-B3AC2AD267FD</generatorID>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5D4E22D0-0B71-D434-981C-A6E57A278618"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

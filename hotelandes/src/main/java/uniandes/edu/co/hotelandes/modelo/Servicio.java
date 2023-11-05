@@ -6,6 +6,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.SequenceGenerator;
 import jakarta.persistence.Table;
 
 @Entity
@@ -13,15 +14,27 @@ import jakarta.persistence.Table;
 public class Servicio {
     
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @SequenceGenerator(name = "sq_servicio", sequenceName = "sq_servicio", allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sq_servicio")
     private Integer id;
     private Date horario_de_servicio;
     private Integer costo;
+    private String tipo_servicio;
     
-    public Servicio(Integer id, Date horario_de_servicio, Integer costo) {
+    
+
+    public Servicio(Integer id, Date horario_de_servicio, Integer costo, String tipo_servicio) {
         this.id = id;
         this.horario_de_servicio = horario_de_servicio;
         this.costo = costo;
+        this.tipo_servicio = tipo_servicio;
+    }
+    public String getTipo_servicio() {
+        return tipo_servicio;
+    }
+
+    public void setTipo_servicio(String tipo_servicio) {
+        this.tipo_servicio = tipo_servicio;
     }
 
     public Servicio(){;}

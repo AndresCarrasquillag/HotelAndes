@@ -24,5 +24,4 @@ public class PrestamosPK {
     public void setId(Servicio id) {
         this.id = id;
     }
-    
 }

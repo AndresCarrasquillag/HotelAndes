@@ -1,0 +1,125 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="29B2CCB4-E1A8-305F-0393-9DB8468E9ACA" name="Reservas">
+<createdBy>carra</createdBy>
+<createdTime>2023-09-25 01:07:33 UTC</createdTime>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<engineerTo>
+<item key="498F6BEF-FBC9-B6E6-9BE3-70E81F68FA05" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="CCAAE5E9-26D8-41BF-A482-B34D9B38945A">
+<createdBy>carra</createdBy>
+<createdTime>2023-09-25 01:07:48 UTC</createdTime>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<engineerTo>
+<item key="498F6BEF-FBC9-B6E6-9BE3-70E81F68FA05" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="fecha hora inicio" id="8FF95A1A-D657-3B69-7EE5-477DA6141325">
+<createdBy>carra</createdBy>
+<createdTime>2023-09-25 01:08:18 UTC</createdTime>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<engineerTo>
+<item key="498F6BEF-FBC9-B6E6-9BE3-70E81F68FA05" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="fecha hora fin" id="92CDF111-1FD7-2037-8A85-6220CB2B69F6">
+<createdBy>carra</createdBy>
+<createdTime>2023-09-25 01:08:49 UTC</createdTime>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<engineerTo>
+<item key="498F6BEF-FBC9-B6E6-9BE3-70E81F68FA05" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="precio" id="8700504B-09FF-4EC9-DEA3-0B9CB9F8AAA4">
+<createdBy>carra</createdBy>
+<createdTime>2023-09-25 01:09:39 UTC</createdTime>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<engineerTo>
+<item key="498F6BEF-FBC9-B6E6-9BE3-70E81F68FA05" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Sedes id" id="BC3B7E86-D35D-BB45-76C1-0696D87513CE">
+<createdBy>carra</createdBy>
+<createdTime>2023-09-25 01:41:58 UTC</createdTime>
+<generatorID>BD5BF836-FBFB-01B7-1367-7BE88AD82862</generatorID>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<engineerTo>
+<item key="498F6BEF-FBC9-B6E6-9BE3-70E81F68FA05" value="true"/>
+</engineerTo>
+<referedAttribute>5132BF79-8737-946C-4C37-F24AAFA8DA89</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Planes de consumo id" id="1D46C8CC-7587-0E3C-A5F2-005F7A78D5C6">
+<createdBy>carra</createdBy>
+<createdTime>2023-09-30 18:50:35 UTC</createdTime>
+<generatorID>F1E2E722-4522-59A8-172D-20576332CC32</generatorID>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<engineerTo>
+<item key="498F6BEF-FBC9-B6E6-9BE3-70E81F68FA05" value="true"/>
+</engineerTo>
+<referedAttribute>F00C52BF-340B-105D-267C-98C6FB9633B3</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id1" id="960FBD0F-FFC3-4C5E-71E0-6C3F57635BBF">
+<createdBy>carra</createdBy>
+<createdTime>2023-09-30 19:46:12 UTC</createdTime>
+<generatorID>BA605D9F-764C-9764-146E-FB47DF5DDD41</generatorID>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<engineerTo>
+<item key="498F6BEF-FBC9-B6E6-9BE3-70E81F68FA05" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>100DB458-D906-69B5-402B-B0482DC62446</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="74F55C29-8EAA-F830-E13E-33F309499E14" name="Reservas PK">
+<createdBy>carra</createdBy>
+<createdTime>2023-09-25 01:08:00 UTC</createdTime>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="498F6BEF-FBC9-B6E6-9BE3-70E81F68FA05" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>CCAAE5E9-26D8-41BF-A482-B34D9B38945A</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Relation_15" directorySegmentName="seg_0" id="A4370B85-159D-493E-2B93-321BD2918855">
+<createdBy>Administrator</createdBy>
+<createdTime>2023-10-01 14:08:03 UTC</createdTime>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<engineerTo>
+<item key="498F6BEF-FBC9-B6E6-9BE3-70E81F68FA05" value="true"/>
+</engineerTo>
+<sourcePk>D15FBFC3-4945-53EC-570F-76CB7B572D69</sourcePk>
+<targetPk>D15FBFC3-4945-53EC-570F-76CB7B572D69</targetPk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>D86605EF-FCBE-F7D8-7CBC-59926C0C79AC</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>F1AFF285-1AFE-D13B-F104-28FB8D95FDB1</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

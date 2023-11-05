@@ -6,32 +6,32 @@ import jakarta.persistence.Table;
 @Table(name = "Gimnasio")
 public class Gimnasio {
     @EmbeddedId
-    private LavanderiaPK pk;
-    private String num_maquinas;
+    private GimnasioPK pk;
+    private Integer num_maquinas;
 
     public Gimnasio(){
         ;
     }
 
-    public Gimnasio(Servicio id, String num_maquinas){
-        this.pk = new LavanderiaPK(id);
+    public Gimnasio(Servicio id, Integer num_maquinas){
+        this.pk = new GimnasioPK(id);
         this.num_maquinas = num_maquinas; 
 
     }
 
-    public LavanderiaPK getPk() {
+    public GimnasioPK getPk() {
         return pk;
     }
 
-    public String getNum_maquinas() {
+    public Integer getNum_maquinas() {
         return num_maquinas;
     }
 
-    public void setPk(LavanderiaPK pk) {
+    public void setPk(GimnasioPK pk) {
         this.pk = pk;
     }
 
-    public void setNum_maquinas(String num_maquinas) {
+    public void setNum_maquinas(Integer num_maquinas) {
         this.num_maquinas = num_maquinas;
     } 
     

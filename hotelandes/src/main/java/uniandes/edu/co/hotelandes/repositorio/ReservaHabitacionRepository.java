@@ -26,7 +26,7 @@ public interface ReservaHabitacionRepository extends JpaRepository<ReservaHabita
     @Modifying
     @Transactional
     @Query(value = "UPDATE Reservas_habitaciones SET habitaciones_id= :habitaciones_id_nuevo, reservas_id= :reservas_id_nuevo WHERE habitaciones_id= :habitaciones_id AND reservas_id= :reservas_id", nativeQuery = true)
-    void updateReservaHabitacion(@Param("habitacion_id") Integer habitaciones_id, @Param("reservas_id") Integer reservas_id, @Param("habitaciones_id_nuevo") Integer habitaciones_id_nuevo, @Param("reservas_id_nuevo") Integer reservas_id_nuevo);
+    void updateReservaHabitacion(@Param("habitaciones_id") Integer habitaciones_id, @Param("reservas_id") Integer reservas_id, @Param("habitaciones_id_nuevo") Integer habitaciones_id_nuevo, @Param("reservas_id_nuevo") Integer reservas_id_nuevo);
 
     @Modifying
     @Transactional

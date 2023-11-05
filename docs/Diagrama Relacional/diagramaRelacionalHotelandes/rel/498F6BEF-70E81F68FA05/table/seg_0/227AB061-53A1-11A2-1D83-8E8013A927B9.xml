@@ -1,0 +1,60 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="227AB061-53A1-11A2-1D83-8E8013A927B9" name="Hoteles">
+<createdBy>carra</createdBy>
+<createdTime>2023-09-24 23:46:36 UTC</createdTime>
+<generatorID>B664FF60-6943-07CA-CD78-D9E9BB47DEB7</generatorID>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="35E6E19B-1544-2C80-556C-621B69B723BE">
+<createdBy>carra</createdBy>
+<createdTime>2023-09-24 23:46:36 UTC</createdTime>
+<generatorID>FBE60154-0EDE-7E2C-262B-FFC3B1088FDC</generatorID>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nombre" id="B7BC263F-A02A-EFBC-6791-00AB67D72EFD">
+<createdBy>carra</createdBy>
+<createdTime>2023-09-24 23:46:36 UTC</createdTime>
+<generatorID>16BF9C2D-A5B5-43E0-18D9-ABA993E222E2</generatorID>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="telefono" id="1AC6443D-B23B-53F9-652B-2229C2EC83B6">
+<createdBy>carra</createdBy>
+<createdTime>2023-09-24 23:46:36 UTC</createdTime>
+<generatorID>432910E2-AF70-5F12-D9F4-5F76CE166178</generatorID>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="B6704E72-614D-C7BD-1CBE-17AC48AA6A9A" name="Hoteles_PK">
+<createdBy>carra</createdBy>
+<createdTime>2023-09-24 23:46:36 UTC</createdTime>
+<generatorID>FEA56A8A-7474-98E8-8ED1-49974BA23522</generatorID>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="35E6E19B-1544-2C80-556C-621B69B723BE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

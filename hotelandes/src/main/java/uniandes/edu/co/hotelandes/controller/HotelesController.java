@@ -30,7 +30,7 @@ public class HotelesController {
     }
     @PostMapping("/hoteles/new/save")
     public String hotelGuardar(@ModelAttribute Hotel hotel){
-        hotelRepository.insertarHotel(hotel.getNombre() , hotel.getTelefono());
+        hotelRepository.insertHotel(hotel.getNombre() , hotel.getTelefono());
         return "redirect:/hoteles";
     }
 
@@ -48,7 +48,7 @@ public class HotelesController {
 
     @PostMapping("/hoteles/{id}/edit/save")
     public String hotelEditarGuardar(@PathVariable("id") int id, @ModelAttribute Hotel hotel){
-        hotelRepository.actualizarHotel(id, hotel.getNombre(), hotel.getTelefono());
+        hotelRepository.updateHotel(id, hotel.getNombre(), hotel.getTelefono());
         return "redirect:/hoteles";
 
     }
@@ -56,9 +56,8 @@ public class HotelesController {
 
     @GetMapping("/hoteles/{id}/delete")
     public String hotelEliminar(@PathVariable("id") int id){
-        hotelRepository.eliminarHotel(id);
+        hotelRepository.deleteHotel(id);
         return "redirect:/hoteles";
     }
 
 }
- 

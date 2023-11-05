@@ -1,0 +1,239 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F1FD24A2-CD0C-4E77-CBB1-43EA387E5EA3" name="Alojamiento">
+<createdBy>Administrator</createdBy>
+<createdTime>2023-10-01 14:55:46 UTC</createdTime>
+<generatorID>EC6D8447-8E68-E5ED-96C3-60E17C158C33</generatorID>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="58FADC69-A548-7403-3C95-E35CB94B0F01">
+<createdBy>Administrator</createdBy>
+<createdTime>2023-10-01 14:55:46 UTC</createdTime>
+<generatorID>AE58D664-A294-F33C-45AC-F08DF252576F</generatorID>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="15190ABF-1214-98AA-638C-D1DF5D2994DC" referredColumn="360A5CBB-9959-BF25-2E46-600E8843EAB0"/>
+</associations>
+</Column>
+<Column name="Check-In_Alojamiento_id1" id="327B298F-D95A-68EF-4E02-D942BA71A4B8">
+<createdBy>Administrator</createdBy>
+<createdTime>2023-10-01 14:55:46 UTC</createdTime>
+<generatorID>8C78DE50-5166-E570-15A5-AE67DCECD70C</generatorID>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id2" id="FAD7C769-E4BD-46F7-378C-93921829B604">
+<createdBy>Administrator</createdBy>
+<createdTime>2023-10-01 14:55:46 UTC</createdTime>
+<generatorID>82D4CA39-C4FB-22BF-0E67-EFF9A72A867D</generatorID>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Check-out_Alojamiento_id1" id="63CB81F8-764A-A89A-2CC6-5AF80AA2D908">
+<createdBy>Administrator</createdBy>
+<createdTime>2023-10-01 14:55:46 UTC</createdTime>
+<generatorID>89CF4709-79A7-F50A-DBEF-655980EF1718</generatorID>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Check-in_horaEntrada" id="0E03C3A9-AFA4-AC8D-0769-7A69E941F247">
+<createdBy>Administrator</createdBy>
+<createdTime>2023-10-01 20:11:34 UTC</createdTime>
+<generatorID>B8C6EE42-F94D-0103-44E7-6BD8AF3A921C</generatorID>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Check-out_horaSalida" id="52E9D69D-D853-6491-BFD5-D6A4C20BA937">
+<createdBy>Administrator</createdBy>
+<createdTime>2023-10-01 20:11:34 UTC</createdTime>
+<generatorID>E7988850-3841-109F-5839-F46EE6039FA7</generatorID>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Check-in_id" id="A72967D1-D1EC-6CDE-3336-63D2F6514DF7">
+<createdBy>Administrator</createdBy>
+<createdTime>2023-10-01 21:03:43 UTC</createdTime>
+<generatorID>1A81A564-C1A0-EC72-F427-D499BE8DA6A7</generatorID>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="5D2D4AA6-82A4-18EC-1746-E4E32680825A" referredColumn="4072B08A-27BE-4160-20D3-554AE032F8B9"/>
+</associations>
+</Column>
+<Column name="Check-out_id" id="9484A045-AA6B-5A9B-9A2B-E0BC6A9C9ADB">
+<createdBy>Administrator</createdBy>
+<createdTime>2023-10-01 21:03:43 UTC</createdTime>
+<generatorID>283BF5FF-5427-1CB3-4459-3857C182E563</generatorID>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="5AEF5E6E-DC18-C106-A81F-8F31508A0F01" referredColumn="4C4A1011-D8D6-2EB4-C81B-A97FE0B4E2F7"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="62855D5E-3E26-A939-B2E4-12FB6E8CD9B4" name="Alojamiento_PK">
+<createdBy>Administrator</createdBy>
+<createdTime>2023-10-01 14:55:46 UTC</createdTime>
+<generatorID>34AACB6C-DEE1-D987-A835-178FC4100253</generatorID>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="58FADC69-A548-7403-3C95-E35CB94B0F01"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E3569926-175A-4E57-C12C-1DB0611155AE" name="Alojamiento_PKv1">
+<createdBy>Administrator</createdBy>
+<createdTime>2023-10-01 14:55:46 UTC</createdTime>
+<generatorID>31B861C9-A623-C73F-A04D-A51733146773</generatorID>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+</ind_PK_UK>
+<ind_PK_UK id="26EDC1A5-D14D-C98C-B8BA-29077A9B80F5" name="Alojamiento__IDX">
+<createdBy>Administrator</createdBy>
+<createdTime>2023-10-01 14:55:46 UTC</createdTime>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>73CA89B9-EA96-AEF1-C824-B85791E5DDF5</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="327B298F-D95A-68EF-4E02-D942BA71A4B8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="ED67EC5F-7723-9CB3-D8D6-98B166438B04" name="Alojamiento__IDXv1">
+<createdBy>Administrator</createdBy>
+<createdTime>2023-10-01 14:55:46 UTC</createdTime>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>D099FEC4-2655-E82A-2BEA-862B81CF210F</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="63CB81F8-764A-A89A-2CC6-5AF80AA2D908"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="38BB4660-AB18-92F2-1B40-CC5D0A3841C4" name="Alojamiento__IDXv2">
+<createdBy>Administrator</createdBy>
+<createdTime>2023-10-01 20:11:34 UTC</createdTime>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>73CA89B9-EA96-AEF1-C824-B85791E5DDF5</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="0E03C3A9-AFA4-AC8D-0769-7A69E941F247"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="13254C69-4CDD-AA19-4E89-C2AD5721E1DD" name="Alojamiento__IDXv3">
+<createdBy>Administrator</createdBy>
+<createdTime>2023-10-01 20:11:34 UTC</createdTime>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>D099FEC4-2655-E82A-2BEA-862B81CF210F</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="52E9D69D-D853-6491-BFD5-D6A4C20BA937"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3C456647-47D2-A6E6-D941-08BD8523380F" name="Alojamiento__IDXv4">
+<createdBy>Administrator</createdBy>
+<createdTime>2023-10-01 21:03:43 UTC</createdTime>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>73CA89B9-EA96-AEF1-C824-B85791E5DDF5</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="A72967D1-D1EC-6CDE-3336-63D2F6514DF7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="235FB91F-B9E9-3C0F-E5CF-2EF25960451A" name="Alojamiento__IDXv5">
+<createdBy>Administrator</createdBy>
+<createdTime>2023-10-01 21:03:43 UTC</createdTime>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>D099FEC4-2655-E82A-2BEA-862B81CF210F</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="9484A045-AA6B-5A9B-9A2B-E0BC6A9C9ADB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E4A8F4AF-DD8A-9A8E-BAF6-053A887EE029" name="Alojamiento_Servicios_FK">
+<createdBy>Administrator</createdBy>
+<createdTime>2023-10-01 14:55:46 UTC</createdTime>
+<generatorID>E0AFC760-A0DA-C5D3-95B4-1B0DDF769D28</generatorID>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="58FADC69-A548-7403-3C95-E35CB94B0F01"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="161C390B-42CA-2697-256E-57B250FFE8FC" name="Alojamiento_Check-in_FK">
+<createdBy>Administrator</createdBy>
+<createdTime>2023-10-02 02:35:53 UTC</createdTime>
+<generatorID>73CA89B9-EA96-AEF1-C824-B85791E5DDF5</generatorID>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A72967D1-D1EC-6CDE-3336-63D2F6514DF7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="82948942-84AF-96BC-01DE-CF7B8609A16B" name="Alojamiento_Check-out_FK">
+<createdBy>Administrator</createdBy>
+<createdTime>2023-10-02 02:35:53 UTC</createdTime>
+<generatorID>D099FEC4-2655-E82A-2BEA-862B81CF210F</generatorID>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9484A045-AA6B-5A9B-9A2B-E0BC6A9C9ADB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

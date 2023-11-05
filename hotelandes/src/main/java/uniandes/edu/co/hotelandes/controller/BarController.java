@@ -41,10 +41,10 @@ public class BarController {
         final Bar bar = barRepository.darBar(id);
         if(bar != null) {
             model.addAttribute("bar", bar);
-            return "rolEditar";
+            return "barEditar";
         }
         else{
-        return "redirect:/cartas";
+        return "redirect:/bares";
         }
     }
 

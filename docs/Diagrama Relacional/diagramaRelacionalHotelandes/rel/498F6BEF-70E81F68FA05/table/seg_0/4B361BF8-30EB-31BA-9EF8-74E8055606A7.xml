@@ -1,0 +1,64 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="4B361BF8-30EB-31BA-9EF8-74E8055606A7" name="Supermercado">
+<createdBy>carra</createdBy>
+<createdTime>2023-09-30 04:42:22 UTC</createdTime>
+<generatorID>9C8A73E4-B064-581F-465F-FED10E8F5DCB</generatorID>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="FE6CE793-9AA3-090C-FF5A-A063E36C99BF">
+<createdBy>carra</createdBy>
+<createdTime>2023-09-30 04:42:22 UTC</createdTime>
+<generatorID>AE58D664-A294-F33C-45AC-F08DF252576F</generatorID>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3960155C-A150-00C8-EDAE-88D24617DE5A" referredColumn="360A5CBB-9959-BF25-2E46-600E8843EAB0"/>
+</associations>
+</Column>
+<Column name="nombre" id="DC9BF3ED-E1C7-96FC-B882-00D252C57441">
+<createdBy>carra</createdBy>
+<createdTime>2023-09-30 04:42:22 UTC</createdTime>
+<generatorID>9D1DDA68-433E-7F3C-A167-2E76473183B0</generatorID>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="03FF6813-1727-B7BC-2A96-FF185AA58517" name="Supermercado_PK">
+<createdBy>carra</createdBy>
+<createdTime>2023-09-30 04:42:22 UTC</createdTime>
+<generatorID>34AACB6C-DEE1-D987-A835-178FC4100253</generatorID>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FE6CE793-9AA3-090C-FF5A-A063E36C99BF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C66C7987-1377-0FD8-DDBB-F99DF30A3FE9" name="Supermercado_Servicio_FK">
+<createdBy>carra</createdBy>
+<createdTime>2023-09-30 04:42:22 UTC</createdTime>
+<generatorID>6278D6C4-C47F-5EC9-8A9E-B7AE531EE92D</generatorID>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FE6CE793-9AA3-090C-FF5A-A063E36C99BF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

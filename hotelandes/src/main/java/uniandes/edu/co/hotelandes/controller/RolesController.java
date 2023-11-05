@@ -23,7 +23,7 @@ public class RolesController {
         return "roles";
     }
 
-    @GetMapping("/habitaciones/new")
+    @GetMapping("/roles/new")
     public String rolForm(Model model) {
         model.addAttribute("rol", new Rol());
         return "rolNuevo";

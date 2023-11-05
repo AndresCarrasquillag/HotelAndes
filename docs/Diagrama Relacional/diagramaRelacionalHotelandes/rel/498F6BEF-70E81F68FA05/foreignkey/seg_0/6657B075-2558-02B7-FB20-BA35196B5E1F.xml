@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="6657B075-2558-02B7-FB20-BA35196B5E1F" containerWithKeyObject="A64ACD16-1840-0342-B0C7-3AA4B4C00736" localFKIndex="14670916-B2CC-52A7-B177-3EEB9B6895F9" name="Lavanderia_Servicio_FK">
+<createdBy>carra</createdBy>
+<createdTime>2023-09-30 04:42:22 UTC</createdTime>
+<generatorID>D243E4AB-4C73-541B-6403-C64468CF8D8A</generatorID>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<referredTableLongName>Servicios</referredTableLongName>
+<arc>04893DDB-2D1E-FA56-92A6-B8BE18CCA7F1</arc>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>45564F65-F077-456D-F851-95FBC8FFE380</referredTableID>
+<keyObject>90B37D7F-CCB0-12FD-78F2-46C34F2503D4</keyObject>
+<referredKeyID>90B37D7F-CCB0-12FD-78F2-46C34F2503D4</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

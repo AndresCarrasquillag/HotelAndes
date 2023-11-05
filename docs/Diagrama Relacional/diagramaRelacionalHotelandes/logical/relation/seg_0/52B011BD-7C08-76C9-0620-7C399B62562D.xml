@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Productos_en_cartas" directorySegmentName="seg_0" id="52B011BD-7C08-76C9-0620-7C399B62562D">
+<createdBy>carra</createdBy>
+<createdTime>2023-09-25 03:02:04 UTC</createdTime>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<engineerTo>
+<item key="498F6BEF-FBC9-B6E6-9BE3-70E81F68FA05" value="true"/>
+</engineerTo>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
+<sourceEntity>1D5DAB06-B99A-CBEF-F071-6327B52F07F3</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>B26EB597-C1F4-2BD0-4F44-F0AA1861B693</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

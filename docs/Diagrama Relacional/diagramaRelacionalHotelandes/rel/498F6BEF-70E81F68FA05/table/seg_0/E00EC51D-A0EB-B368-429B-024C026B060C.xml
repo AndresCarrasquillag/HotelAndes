@@ -1,0 +1,111 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="E00EC51D-A0EB-B368-429B-024C026B060C" name="Cartas">
+<createdBy>carra</createdBy>
+<createdTime>2023-09-25 03:03:14 UTC</createdTime>
+<generatorID>B26EB597-C1F4-2BD0-4F44-F0AA1861B693</generatorID>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="326A6A47-9ACD-1F88-D5E9-B4C8D4E456BD">
+<createdBy>carra</createdBy>
+<createdTime>2023-09-25 03:03:14 UTC</createdTime>
+<generatorID>0C561EF2-AAD9-9280-6C4F-2AFC32B7F888</generatorID>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Bar_id" id="E398636E-5857-7560-7BFE-793B2FECE303">
+<createdBy>Administrator</createdBy>
+<createdTime>2023-10-01 14:55:46 UTC</createdTime>
+<generatorID>5DD59CAD-0D88-0BCF-E692-1C4150A4A497</generatorID>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="2E1FBC8A-049E-2E39-8FD2-37FF8BFE678C" referredColumn="5210EB8B-FA60-BD28-3C59-B43C8D7D2483"/>
+</associations>
+</Column>
+<Column name="Restaurante_id" id="05ACA546-0E54-AC3C-334B-CA4C02D89E13">
+<createdBy>Administrator</createdBy>
+<createdTime>2023-10-01 14:55:46 UTC</createdTime>
+<generatorID>5292DD06-BD38-9E16-2915-A4EB0F267075</generatorID>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E44DAD5A-8312-EA06-9A3E-ED1F962E3000" referredColumn="27561FB0-8E04-31D0-825D-505FEEF31F72"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="FB87C682-3FEC-83AE-A626-AD1F72F04BE4" name="Cartas_PK">
+<createdBy>carra</createdBy>
+<createdTime>2023-09-25 03:03:14 UTC</createdTime>
+<generatorID>4EF6F0CE-B571-DA00-9D5D-CA6960689251</generatorID>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="326A6A47-9ACD-1F88-D5E9-B4C8D4E456BD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="013275B9-7E31-534E-E15E-6685B81B08DB" name="Cartas__IDX">
+<createdBy>Administrator</createdBy>
+<createdTime>2023-10-01 14:55:46 UTC</createdTime>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>ED876558-484D-E864-D5E1-8FF8C2469FB3</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="E398636E-5857-7560-7BFE-793B2FECE303"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="137FE026-F0D6-CD30-34E8-1D010F55BB1D" name="Cartas__IDXv1">
+<createdBy>Administrator</createdBy>
+<createdTime>2023-10-01 14:55:46 UTC</createdTime>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>9B591949-B1B6-BCF5-118B-62B75A5BAC63</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="05ACA546-0E54-AC3C-334B-CA4C02D89E13"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A6634C52-2D2D-A0B5-E170-42F42E12C7F2" name="Cartas_Bar_FK">
+<createdBy>Administrator</createdBy>
+<createdTime>2023-10-01 14:55:46 UTC</createdTime>
+<generatorID>ED876558-484D-E864-D5E1-8FF8C2469FB3</generatorID>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E398636E-5857-7560-7BFE-793B2FECE303"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="955A12B1-BFC1-9F9B-D115-A9A9BBFAA6EA" name="Cartas_Restaurante_FK">
+<createdBy>Administrator</createdBy>
+<createdTime>2023-10-01 14:55:46 UTC</createdTime>
+<generatorID>9B591949-B1B6-BCF5-118B-62B75A5BAC63</generatorID>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="05ACA546-0E54-AC3C-334B-CA4C02D89E13"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

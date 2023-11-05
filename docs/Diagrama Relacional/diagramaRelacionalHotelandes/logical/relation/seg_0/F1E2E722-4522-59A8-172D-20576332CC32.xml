@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Reservas Planes de consumo FK" directorySegmentName="seg_0" id="F1E2E722-4522-59A8-172D-20576332CC32">
+<createdBy>carra</createdBy>
+<createdTime>2023-09-30 18:50:35 UTC</createdTime>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<engineerTo>
+<item key="498F6BEF-FBC9-B6E6-9BE3-70E81F68FA05" value="true"/>
+</engineerTo>
+<sourcePk>9CEBB317-4D06-F98D-4CFF-898B2D35C79E</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>F880633D-CBDB-8897-FFD2-699FD3C7F210</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>29B2CCB4-E1A8-305F-0393-9DB8468E9ACA</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

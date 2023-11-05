@@ -4,6 +4,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.SequenceGenerator;
 import jakarta.persistence.Table;
 
 @Entity
@@ -11,14 +12,15 @@ import jakarta.persistence.Table;
 public class TipoHabitacion {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @SequenceGenerator(name = "sq_tipos_habitacion", sequenceName = "sq_tipos_habitacion", allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sq_tipos_habitacion")
     private Integer id;
-    private String desripcion;
+    private String descripcion;
     private String nombre_tipo;
     
     public TipoHabitacion(Integer id, String desripcion, String nombre_tipo) {
         this.id = id;
-        this.desripcion = desripcion;
+        this.descripcion = desripcion;
         this.nombre_tipo = nombre_tipo;
     }
 
@@ -32,12 +34,12 @@ public class TipoHabitacion {
         this.id = id;
     }
 
-    public String getDesripcion() {
-        return desripcion;
+    public String getDescripcion() {
+        return descripcion;
     }
 
-    public void setDesripcion(String desripcion) {
-        this.desripcion = desripcion;
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
     }
 
     public String getNombre_tipo() {

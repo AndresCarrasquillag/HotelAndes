@@ -7,6 +7,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.SequenceGenerator;
 import jakarta.persistence.Table;
 
 @Entity
@@ -14,17 +15,18 @@ import jakarta.persistence.Table;
 public class PlanesDeConsumo {
     
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @SequenceGenerator(name = "sq_planes_de_consumo", sequenceName = "sq_planes_de_consumo", allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sq_planes_de_consumo")
     private Integer id;
     private String nombre;
     private String descripcion;
-    private String descuento;
+    private Integer descuento;
     
     @ManyToOne
-    @JoinColumn(name = "Hoteles", referencedColumnName = "id")
+    @JoinColumn(name = "HOTELES_ID", referencedColumnName = "id")
     private Hotel hotel;
 
-    public PlanesDeConsumo(Integer id, String nombre, String descripcion, String descuento, Hotel hotel) {
+    public PlanesDeConsumo(Integer id, String nombre, String descripcion, Integer descuento, Hotel hotel) {
         this.id = id;
         this.nombre = nombre;
         this.descripcion = descripcion;
@@ -58,11 +60,11 @@ public class PlanesDeConsumo {
         this.descripcion = descripcion;
     }
 
-    public String getDescuento() {
+    public Integer getDescuento() {
         return descuento;
     }
 
-    public void setDescuento(String descuento) {
+    public void setDescuento(Integer descuento) {
         this.descuento = descuento;
     }
 

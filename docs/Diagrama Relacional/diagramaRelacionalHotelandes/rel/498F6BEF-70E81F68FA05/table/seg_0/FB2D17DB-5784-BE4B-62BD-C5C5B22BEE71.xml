@@ -1,0 +1,72 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="FB2D17DB-5784-BE4B-62BD-C5C5B22BEE71" name="Tipos_habitacion">
+<createdBy>carra</createdBy>
+<createdTime>2023-09-25 01:00:40 UTC</createdTime>
+<generatorID>F8EC42A9-9DB7-1EAE-D3C3-244BA91010B9</generatorID>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<ordsAlias>tipos_habitacionv1</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="nombre_tipo" id="CAC65BAC-0290-493C-0C70-B02ACE7D161A">
+<createdBy>carra</createdBy>
+<createdTime>2023-09-25 01:00:40 UTC</createdTime>
+<generatorID>28B86CFD-9AD0-BC8D-1441-255954434715</generatorID>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="descripcion" id="37F5B8A9-F4F2-C05F-0B10-75023B215DFB">
+<createdBy>carra</createdBy>
+<createdTime>2023-09-30 21:37:08 UTC</createdTime>
+<generatorID>9606783E-44FB-F8FF-ECF8-8B8D295CED42</generatorID>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id" id="41756BCD-C12C-A45F-F5C8-9C75EB5320FB">
+<createdBy>carra</createdBy>
+<createdTime>2023-09-30 21:37:08 UTC</createdTime>
+<generatorID>499151B0-1A2B-0B71-8950-7AF4AA438A1C</generatorID>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="costo" id="AC303F6D-9863-BA07-6A85-E011CC482B64">
+<createdBy>Administrator</createdBy>
+<createdTime>2023-10-02 02:35:53 UTC</createdTime>
+<generatorID>23C49EBA-0D69-1755-648C-A34D1464B979</generatorID>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="800C12A7-2F4F-6002-CC47-3BC2BBD295FA" name="Tipos_habitacion_PK">
+<createdBy>carra</createdBy>
+<createdTime>2023-09-25 01:00:40 UTC</createdTime>
+<generatorID>E4BAF58F-A579-1ACB-0CBB-D3EB4F2CD343</generatorID>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="41756BCD-C12C-A45F-F5C8-9C75EB5320FB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

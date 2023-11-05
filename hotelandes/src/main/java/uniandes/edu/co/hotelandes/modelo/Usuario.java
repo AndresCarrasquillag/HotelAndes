@@ -6,6 +6,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.SequenceGenerator;
 import jakarta.persistence.Table;
 
 @Entity
@@ -13,7 +14,8 @@ import jakarta.persistence.Table;
 public class Usuario {
     
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @SequenceGenerator(name = "sq_usuarios", sequenceName = "sq_usuarios", allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sq_usuarios")
     private Integer id;
     private String user;
     private String password;
@@ -21,7 +23,7 @@ public class Usuario {
     private String telefono;
 
     @ManyToOne
-    @JoinColumn(name = "Roles", referencedColumnName = "id")
+    @JoinColumn(name = "Roles_id_rol", referencedColumnName = "id")
     private Rol rol;
     
     public Usuario(Integer id, String user, String password, String nombre, String telefono, Rol rol) {

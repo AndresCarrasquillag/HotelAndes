@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="diagramaRelacionalHotelandes" id="8CD6BDB2-3579-7B54-62DF-7A1BDB86FD3F" version="3.5">
+<createdBy>carra</createdBy>
+<createdTime>2023-09-24 23:41:18 UTC</createdTime>
+<ownerDesignName>modelo proy sistrans</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>8CD6BDB2-3579-7B54-62DF-7A1BDB86FD3F</designId>
+</OSDM_Design>

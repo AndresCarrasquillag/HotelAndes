@@ -1,0 +1,136 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="EA185B69-E517-DAFD-6FDA-578A7FC95BF4" name="Habitaciones">
+<createdBy>carra</createdBy>
+<createdTime>2023-09-25 01:00:40 UTC</createdTime>
+<generatorID>B24F7E3E-A0A5-380C-8065-AF607571CD26</generatorID>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="51541772-9037-7911-66F0-D237804D6115">
+<createdBy>carra</createdBy>
+<createdTime>2023-09-25 01:00:40 UTC</createdTime>
+<generatorID>58137862-3A94-F62A-B0BF-A8704747B1A0</generatorID>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="capacidad" id="867FBE39-4211-EC1B-997F-7710FD46D776">
+<createdBy>carra</createdBy>
+<createdTime>2023-09-25 01:00:40 UTC</createdTime>
+<generatorID>A4B568EB-CBEF-0D9F-71DB-4DD7562BB1CF</generatorID>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="costo" id="818CD90E-082F-0B25-BE49-0C672AEA77A1">
+<createdBy>carra</createdBy>
+<createdTime>2023-09-25 01:00:40 UTC</createdTime>
+<generatorID>49993812-080A-0360-A0DE-F8C76DEA70C8</generatorID>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Tipos_habitacion_nombre_tipo" id="0E4A2AF1-2F41-DDAC-03E4-4976157FD423">
+<createdBy>carra</createdBy>
+<createdTime>2023-09-25 01:00:40 UTC</createdTime>
+<generatorID>B44555E2-4F9F-6753-C505-EA6E2E66E772</generatorID>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Sedes_id" id="3562C742-0ACE-31E2-0A20-ECBDBEB894E5">
+<createdBy>carra</createdBy>
+<createdTime>2023-09-25 01:32:40 UTC</createdTime>
+<generatorID>1D6FE05E-D938-05CA-E78D-0D305B7C9AD8</generatorID>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="341676C9-C3D3-FD90-B446-B588DB868457" referredColumn="100209A4-34BF-7747-89C4-9EAFE6DC61BD"/>
+</associations>
+</Column>
+<Column name="id_tipo" id="5A8AD752-94FB-B898-C96F-9F56C7543CB2">
+<createdBy>carra</createdBy>
+<createdTime>2023-09-30 21:37:08 UTC</createdTime>
+<generatorID>8537E219-A5C4-91C9-2D7B-6BF1A79C0DA0</generatorID>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Tipos_habitacion_id" id="6B52943A-8736-E1B0-4C63-D0A900121BE5">
+<createdBy>Administrator</createdBy>
+<createdTime>2023-10-01 20:11:34 UTC</createdTime>
+<generatorID>6C5A2022-7190-8DC3-C143-4C6F08E3A218</generatorID>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="91D87149-2DC9-9E22-F0E4-FA245D09B20F" referredColumn="41756BCD-C12C-A45F-F5C8-9C75EB5320FB"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="6EA8A48C-E334-CC32-B036-6D8AE36462EB" name="Habitaciones_PK">
+<createdBy>carra</createdBy>
+<createdTime>2023-09-25 01:00:40 UTC</createdTime>
+<generatorID>C0818039-E5F7-0B32-5253-77BCEAF7B694</generatorID>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="51541772-9037-7911-66F0-D237804D6115"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F1BDA164-4E89-6CAD-1C50-977930CE61C0" name="Habitaciones_Tipos_habitacion_FK">
+<createdBy>carra</createdBy>
+<createdTime>2023-09-25 01:00:40 UTC</createdTime>
+<generatorID>1F9791C6-76C1-21EA-B2A8-8F27C9DC11B2</generatorID>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6B52943A-8736-E1B0-4C63-D0A900121BE5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="BF812E27-A021-974B-3F22-C73B7CDFF216" name="Habitaciones_Sedes_FK">
+<createdBy>carra</createdBy>
+<createdTime>2023-09-25 01:32:40 UTC</createdTime>
+<generatorID>AA61556A-EE47-A22C-B1D2-9A0AF33A9B6E</generatorID>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3562C742-0ACE-31E2-0A20-ECBDBEB894E5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

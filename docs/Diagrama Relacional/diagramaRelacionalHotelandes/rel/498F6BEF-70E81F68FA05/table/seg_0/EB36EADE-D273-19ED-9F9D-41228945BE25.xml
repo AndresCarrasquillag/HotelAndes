@@ -1,0 +1,173 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="EB36EADE-D273-19ED-9F9D-41228945BE25" name="Usuarios">
+<createdBy>carra</createdBy>
+<createdTime>2023-09-30 20:06:20 UTC</createdTime>
+<generatorID>F1AFF285-1AFE-D13B-F104-28FB8D95FDB1</generatorID>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="B10B352A-B32F-469A-B540-95ADE66D4398">
+<createdBy>carra</createdBy>
+<createdTime>2023-09-30 20:06:20 UTC</createdTime>
+<generatorID>100DB458-D906-69B5-402B-B0482DC62446</generatorID>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="user" id="B488B0FB-FC08-D535-6D14-7F692FA41C08">
+<createdBy>carra</createdBy>
+<createdTime>2023-09-30 20:06:20 UTC</createdTime>
+<generatorID>61667B23-194E-6DC8-A429-588617B28DED</generatorID>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="password" id="AC9A231A-47C1-18D0-D8F5-09A9788541CD">
+<createdBy>carra</createdBy>
+<createdTime>2023-09-30 20:06:20 UTC</createdTime>
+<generatorID>4252FF67-BA47-6185-975C-A8FEF1DC17EC</generatorID>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nombre" id="27894C46-7A71-E3EF-4AD5-FB799FCEE693">
+<createdBy>carra</createdBy>
+<createdTime>2023-09-30 20:06:20 UTC</createdTime>
+<generatorID>C39F1877-078D-CCD8-760A-551D85F517B8</generatorID>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="telefono" id="DA087CD3-E9B7-6DF9-F0E5-7D18AAD7E227">
+<createdBy>carra</createdBy>
+<createdTime>2023-09-30 20:06:20 UTC</createdTime>
+<generatorID>3BC49792-02D1-DC39-A355-DEDDD8860DCB</generatorID>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Roles_id_rol" id="451E03FD-C0BF-A987-1238-995DBE7073DD">
+<createdBy>carra</createdBy>
+<createdTime>2023-09-30 20:06:20 UTC</createdTime>
+<generatorID>D98CAB29-9F55-CED3-9028-A405D0A402E1</generatorID>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B8319FA3-30C4-EC5D-1716-E675C09111C7" referredColumn="E7216D2F-1C6D-FF9F-29E9-6B7BA8197737"/>
+</associations>
+</Column>
+<Column name="id1" id="D04EC11F-C90A-820E-407C-637DCA86E2A3">
+<createdBy>Administrator</createdBy>
+<createdTime>2023-10-01 14:55:46 UTC</createdTime>
+<generatorID>BBCB06B8-88EB-433C-1940-BA626930BC4B</generatorID>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Alojamiento_id1" id="6A1E8C1A-18E1-3A39-25AA-48D0DD2C855F">
+<createdBy>Administrator</createdBy>
+<createdTime>2023-10-01 14:55:46 UTC</createdTime>
+<generatorID>7B50749A-8DDD-8D42-E071-9FE8E4D1A97F</generatorID>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Consumos_id" id="8971ACA0-A39B-1991-DF5C-0A27D380DF44">
+<createdBy>Administrator</createdBy>
+<createdTime>2023-10-01 20:11:34 UTC</createdTime>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A7EF96B6-3226-50BD-AD14-A810565E0116" referredColumn="D6ABE2FF-3FC0-0E79-5D9B-051A50F07595"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="0F952EB2-EF7F-EA69-02FC-D7349EB0AED1" name="Usuarios_PK">
+<createdBy>carra</createdBy>
+<createdTime>2023-09-30 20:06:20 UTC</createdTime>
+<generatorID>D15FBFC3-4945-53EC-570F-76CB7B572D69</generatorID>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B10B352A-B32F-469A-B540-95ADE66D4398"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="41A1255A-D56B-6A2D-B108-382F824BD6EF" name="Usuarios__IDX">
+<createdBy>Administrator</createdBy>
+<createdTime>2023-10-01 14:55:46 UTC</createdTime>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>561BA670-6A20-DEE6-3EFF-4CAED448DBD0</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="6A1E8C1A-18E1-3A39-25AA-48D0DD2C855F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A1893917-EAEB-11DF-15B6-F2D219E0D82E" name="Usuarios_Roles_FK">
+<createdBy>carra</createdBy>
+<createdTime>2023-09-30 20:06:20 UTC</createdTime>
+<generatorID>18504AC4-5F0D-0337-6921-5A7EDC60BBE0</generatorID>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="451E03FD-C0BF-A987-1238-995DBE7073DD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="55E27155-10C4-9A04-B156-937C62DCD76C" name="Usuarios_Alojamiento_FK">
+<createdBy>Administrator</createdBy>
+<createdTime>2023-10-01 14:55:46 UTC</createdTime>
+<generatorID>561BA670-6A20-DEE6-3EFF-4CAED448DBD0</generatorID>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+</ind_PK_UK>
+<ind_PK_UK id="8C554A86-8211-AD2F-E0FF-08037A459FFE" name="Usuarios_Consumos_FK">
+<createdBy>Administrator</createdBy>
+<createdTime>2023-10-01 14:55:46 UTC</createdTime>
+<generatorID>A4370B85-159D-493E-2B93-321BD2918855</generatorID>
+<ownerDesignName>diagramaRelacionalHotelandes</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8971ACA0-A39B-1991-DF5C-0A27D380DF44"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

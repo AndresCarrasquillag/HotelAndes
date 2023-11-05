@@ -19,8 +19,14 @@ public class UsuarioController {
     @GetMapping("/usuarios")
     public String usuarios(Model model) {
         model.addAttribute("usuarios", usuarioRepository.darUsuarios());
-        return "ususarios";
+        return "usuarios";
     }
+
+    @GetMapping("usuarios/{id}/consumosPorUsuarioForm")
+    public String consumosPorUsuarioForm(@PathVariable("id") Integer id, Model model) {
+        return "consumosPorUsuarioForm";
+    }
+
 
     @GetMapping("/usuarios/new")
     public String usuarioForm(Model model) {

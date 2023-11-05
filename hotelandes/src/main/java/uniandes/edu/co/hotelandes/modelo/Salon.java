@@ -1,5 +1,5 @@
 package uniandes.edu.co.hotelandes.modelo;
-import java.sql.Date;
+
 
 import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.Entity;
@@ -60,4 +60,8 @@ public class Salon {
     }
 
     
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/main

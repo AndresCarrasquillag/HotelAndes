@@ -7,13 +7,13 @@ import jakarta.persistence.Table;
 public class Piscina {
     @EmbeddedId
     private PiscinaPK pk;
-    private String profundidad;
+    private Integer profundidad;
 
     public Piscina(){
         ;
     }
 
-    public Piscina(Servicio id, String profundidad){
+    public Piscina(Servicio id, Integer profundidad){
         this.pk = new PiscinaPK(id);
         this.profundidad = profundidad; 
 
@@ -23,7 +23,7 @@ public class Piscina {
         return pk;
     }
 
-    public String getProfundidad() {
+    public Integer getProfundidad() {
         return profundidad;
     }
 
@@ -31,7 +31,7 @@ public class Piscina {
         this.pk = pk;
     }
 
-    public void setProfundidad(String profundidad) {
+    public void setProfundidad(Integer profundidad) {
         this.profundidad = profundidad;
     }
     

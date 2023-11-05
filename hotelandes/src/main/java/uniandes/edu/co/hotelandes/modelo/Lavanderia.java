@@ -7,33 +7,47 @@ import jakarta.persistence.Table;
 public class Lavanderia {
     @EmbeddedId
     private LavanderiaPK pk;
-    private String nombre;
+    private Integer precioPorPrenda;
+    private Integer cantidadPrendas;
+
+    public Integer getCantidadPrenda() {
+        return cantidadPrendas;
+    }
+
+    public void setCantidadPrenda(Integer cantidadPrenda) {
+        this.cantidadPrendas = cantidadPrenda;
+    }
+
+    public Integer getPrecioPorPrenda() {
+        return precioPorPrenda;
+    }
+
+    public void setPrecioPorPrenda(Integer precioPorPrenda) {
+        this.precioPorPrenda = precioPorPrenda;
+    }
 
     public Lavanderia(){
         ;
     }
 
-    public Lavanderia(Servicio id, String nombre){
+    public Lavanderia(Servicio id, Integer cantidadPrendas, Integer precioPorPrenda){
         this.pk = new LavanderiaPK(id);
+<<<<<<< HEAD
         this.nombre = nombre; 
 
     } 
+=======
+        this.precioPorPrenda = precioPorPrenda; 
+        this.precioPorPrenda = precioPorPrenda;
+    }
+>>>>>>> origin/main
 
     public LavanderiaPK getPk() {
         return pk;
     }
 
-    public String getNombre() {
-        return nombre;
-    }
-
     public void setPk(LavanderiaPK pk) {
         this.pk = pk;
     }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-    
     
 }
