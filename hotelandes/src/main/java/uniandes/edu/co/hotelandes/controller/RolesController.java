@@ -35,9 +35,9 @@ public class RolesController {
         return "redirect:/roles";
     }
 
-    @GetMapping("/roles/{id}/edit")
-    public String rolEditarForm(@PathVariable("id") Integer id, Model model) {
-        Rol rol = rolRepository.darRol(id);
+    @GetMapping("/roles/{id_rol}/edit")
+    public String rolEditarForm(@PathVariable("id_rol") Integer id_rol, Model model) {
+        Rol rol = rolRepository.darRol(id_rol);
         if (rol != null) {
             model.addAttribute("rol", rol);
             return "rolEditar";
@@ -49,15 +49,15 @@ public class RolesController {
 
     }
 
-    @PostMapping("/roles/{id}/edit/save")
-    public String rolEditarGuardar(@PathVariable("id") Integer id, @ModelAttribute Rol rol) {
-        rolRepository.updateRol(id, rol.getDescripcion());
+    @PostMapping("/roles/{id_rol}/edit/save")
+    public String rolEditarGuardar(@PathVariable("id_rol") Integer id_rol, @ModelAttribute Rol rol) {
+        rolRepository.updateRol(id_rol, rol.getDescripcion());
         return "redirect:/roles";
     }
 
-    @GetMapping("/roles/{id}/delete")
-    public String RolEliminar(@PathVariable("id") Integer id) {
-        rolRepository.deleteRol(id);
+    @GetMapping("/roles/{id_rol}/delete")
+    public String RolEliminar(@PathVariable("id_rol") Integer id_rol) {
+        rolRepository.deleteRol(id_rol);
         return "redirect:/roles";
     }
     
