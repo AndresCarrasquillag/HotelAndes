@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoteles</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Lista de hoteles</h1>
+        <table class="table table-hover">
+            <thead class="thead-dark">
+                <tr>
+                    <th>id</th>
+                    <th>nombre</th>
+                    <th>telefono</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="hotel : ${hoteles}">
+                    <td th:text="${hotel.id}"></td>
+                    <td th:text="${hotel.nombre}"></td>
+                    <td th:text="${hotel.telefono}"></td>
+                    <td>
+                        <a th:href="@{'/hoteles/' + ${hotel.id} + '/edit'}" class="btn btn-warning btn-sm">Editar</a>
+                        <a th:href="@{'/hoteles/' + ${hotel.id} + '/delete'}" class="btn btn-danger btn-sm" onclick="return confirm('¿Seguro de borrar el hotel?')">Borrar</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div>
+            <a th:href="@{/}" class="btn btn-primary">Volver atrás</a>
+            <a th:href="@{hoteles/new}" class="btn btn-primary">Añadir hotel</a>
+        </div>
+        
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>

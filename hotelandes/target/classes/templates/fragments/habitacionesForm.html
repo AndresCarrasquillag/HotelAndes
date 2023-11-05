@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fragmento</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.min.css}"/>
+
+</head>
+<body>
+    <div th:fragment="habitacionesForm(titulo)" class="container border border-2 w-25">
+        <h1 class="text-center" th:text="${titulo}"></h1>
+        <form>
+            <label  class="col-form-label">Capacidad</label>
+            <input  class="form-control" type="number" id="capacidad" name="capacidad" required th:value="${habitacion.capacidad}" />
+            <label  class="col-form-label">Costo</label>
+            <input  class="form-control" type="number" id="costo" name="costo" required th:value="${habitacion.costo}" />
+            <label  class="col-form-label">Sedes_id</label>
+            <input  class="form-control" type="number" id="sede" name="sede" required th:value="${habitacion.sede}" />
+            <label  class="col-form-label">Id_tipo</label>
+            <input  class="form-control" type="number" id="tipoHabitacion" name="tipoHabitacion" required th:value="${habitacion.tipoHabitacion}" />
+            <div class="text-center">
+                <input type="submit" value="Guardar" class="btn btn-primary"/>
+                <a th:href="@{/habitaciones}" class="btn btn btn-primary">Cancelar</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+
