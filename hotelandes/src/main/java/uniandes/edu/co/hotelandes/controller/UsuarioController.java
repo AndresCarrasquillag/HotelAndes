@@ -36,7 +36,7 @@ public class UsuarioController {
 
     @PostMapping("/usuarios/new/save")
     public String usuariosGuardar(@ModelAttribute Usuario usuario) {
-        usuarioRepository.insertUsuario(usuario.getUser(), usuario.getPassword(), usuario.getNombre(), usuario.getTelefono());
+        usuarioRepository.insertUsuario(usuario.getUser(), usuario.getPassword(), usuario.getNombre(), usuario.getTelefono(), usuario.getRol().getId());
         return "redirect:/usuarios";
     }
 
@@ -55,7 +55,7 @@ public class UsuarioController {
 
     @PostMapping("/usuarios/{id}/edit/save")
     public String usuarioEditarGuardar(@PathVariable("id") Integer id, @ModelAttribute Usuario usuario) {
-        usuarioRepository.updateUsuarios(id, usuario.getUser(), usuario.getPassword(), usuario.getNombre(), usuario.getTelefono());
+        usuarioRepository.updateUsuarios(id, usuario.getUser(), usuario.getPassword(), usuario.getNombre(), usuario.getTelefono(), usuario.getRol().getId());
         return "redirect:/usuarios";
     }
 
