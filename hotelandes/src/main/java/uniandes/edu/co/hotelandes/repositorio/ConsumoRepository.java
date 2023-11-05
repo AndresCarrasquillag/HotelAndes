@@ -25,7 +25,7 @@ public interface ConsumoRepository extends JpaRepository<Consumo, Integer> {
             "WHERE FECHA_DE_PAGO BETWEEN ADD_MONTHS(SYSDATE, -12) AND SYSDATE\r\n" + //
             "GROUP BY servicios_id HAVING COUNT(*) < 156", nativeQuery = true)
     Collection<RespInfoConsumos> darServiciosDeBajaDemanda();
-    
+
     @Query(value="SELECT SUM(COSTO) AS Consumo_Total FROM CONSUMOS WHERE ID_USUARIO = :id AND FECHA_DE_PAGO BETWEEN TO_DATE(:fechaInicio,'YYYY-MM-DD') AND TO_DATE(:fechaFin,'YYYY-MM-DD')", nativeQuery=true)
     Integer darConsumosUsuario(@Param("id") Integer id, @Param("fechaInicio") String fechaInicio, @Param("fechaFin") String fechaFin);
 
@@ -50,5 +50,8 @@ public interface ConsumoRepository extends JpaRepository<Consumo, Integer> {
     @Transactional
     @Query(value = "DELETE FROM Consumos WHERE id= :id", nativeQuery = true)
     void deleteConsumo(@Param("id") Integer id);
+
+    @Query(value = "SELECT SUM(consumos.costo) FROM CONSUMOS WHERE consumos.habitacion_id=:id AND consumos.fecha_de_pago BETWEEN TRUNC(SYSDATE , 'Year') AND SYSDATE", nativeQuery = true)
+    Integer darIngreso(@Param("id") Integer id);
 
 }

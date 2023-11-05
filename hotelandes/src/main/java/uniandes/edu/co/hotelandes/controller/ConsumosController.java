@@ -77,4 +77,12 @@ public class ConsumosController {
         return "redirect:/roles";
     }
 
+    @GetMapping("/habitaciones/{id}/verIngresos")
+    public String habitacionVerIngresos(@PathVariable("id") Integer id, Model model) {
+        Integer valorIngreso = consumoRepository.darIngreso(id);
+        model.addAttribute("ingreso", valorIngreso);
+
+        return "habitacionesIngresos";
+    }
+
 }
