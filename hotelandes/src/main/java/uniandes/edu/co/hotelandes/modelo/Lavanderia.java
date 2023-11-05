@@ -32,15 +32,12 @@ public class Lavanderia {
 
     public Lavanderia(Servicio id, Integer cantidadPrendas, Integer precioPorPrenda){
         this.pk = new LavanderiaPK(id);
-<<<<<<< HEAD
-        this.nombre = nombre; 
 
-    } 
-=======
+        
         this.precioPorPrenda = precioPorPrenda; 
         this.precioPorPrenda = precioPorPrenda;
     }
->>>>>>> origin/main
+
 
     public LavanderiaPK getPk() {
         return pk;

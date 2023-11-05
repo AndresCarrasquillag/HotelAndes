@@ -21,14 +21,10 @@ public interface LavanderiaRepository extends JpaRepository<Lavanderia, Integer>
 
     @Modifying
     @Transactional
-<<<<<<< HEAD
-    @Query(value="UPDATE Lavanderias SET cantidad_prenda=:cantidad_prenda WHERE id=:id, precio=:precio WHERE id=:id, tipo_servicio=:tipo_servicio WHERE id=:id  ")
-    void actualizarLavanderia(@Param("id") Integer id, @Param("cantidad_prenda") String cantidad_prenda,
-    @Param("precio") String precio, @Param("tipo_servicio") String tipo_servicio);
-=======
+
     @Query(value="UPDATE Lavanderia SET precioPorPrenda=:precioPorPrenda, cantidadPrendas=:cantidadPrendas WHERE id=:id", nativeQuery=true)
     void actualizarLavanderia(@Param("id") Integer id, @Param("cantidadPrendas") Integer cantidadPrendas, @Param("precioPorPrenda") Integer precioPorPrenda);
->>>>>>> origin/main
+
      
     @Modifying
     @Transactional

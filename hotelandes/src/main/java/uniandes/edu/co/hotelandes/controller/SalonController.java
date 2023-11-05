@@ -7,10 +7,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import uniandes.edu.co.hotelandes.modelo.Salon;
-<<<<<<< HEAD
+
 import uniandes.edu.co.hotelandes.modelo.Sede;
-=======
->>>>>>> origin/main
+
 import uniandes.edu.co.hotelandes.repositorio.SalonRepository;
 public class SalonController {
     @Autowired
@@ -30,11 +29,9 @@ public class SalonController {
 
     @PostMapping("/salones/new/save")
     public String salonGuardar(@ModelAttribute Salon salon) {
-<<<<<<< HEAD
-        salonRepository.insertarSalon( salon.getDisponibilidad(), salon.getHora_limpieza(),salon.getTipo());
-=======
+
         salonRepository.insertarSalon(salon.getDisponibilidad(), salon.getHora_limpieza(),salon.getTipo());
->>>>>>> origin/main
+
         return "redirect:/salon";
     }
 
@@ -66,9 +63,7 @@ public class SalonController {
     }
 
 
-<<<<<<< HEAD
+
+
 }
 
-=======
-}
->>>>>>> origin/main

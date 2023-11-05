@@ -1,29 +1,14 @@
 package uniandes.edu.co.hotelandes.modelo;
-<<<<<<< HEAD
+
 import java.sql.Date;
-=======
->>>>>>> origin/main
+
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-<<<<<<< HEAD
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.OneToOne;
-import jakarta.persistence.Table;
 
-@Entity
-@Table(name = "Check_In")
-public class Check_out {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
-    private Date hora_salida;
-    
 
-    
-=======
 import jakarta.persistence.SequenceGenerator;
 import jakarta.persistence.Table;
 
@@ -62,9 +47,8 @@ public class Check_out {
     }
 
 
-    
+
 
     
-    
->>>>>>> origin/main
+
 }

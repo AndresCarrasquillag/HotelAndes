@@ -60,8 +60,5 @@ public class Salon {
     }
 
     
-<<<<<<< HEAD
+
 }
-=======
-}
->>>>>>> origin/main
