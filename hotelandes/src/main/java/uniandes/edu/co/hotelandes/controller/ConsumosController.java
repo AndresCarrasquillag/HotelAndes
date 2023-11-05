@@ -1,5 +1,4 @@
 package uniandes.edu.co.hotelandes.controller;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -7,7 +6,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-
 import uniandes.edu.co.hotelandes.modelo.Consumo;
 import uniandes.edu.co.hotelandes.repositorio.ConsumoRepository;
 
@@ -19,8 +17,15 @@ public class ConsumosController {
 
     @GetMapping("/serviciosPopulares")
     public String serviciosPopulares(Model model) {
+        //Collection<RespInfoConsumos> frec = consumoRepository.darServiciosPopulares();
         model.addAttribute("populares", consumoRepository.darServiciosPopulares());
         return "serviciosPopulares";
+    }
+
+    @GetMapping("/usuarios/{id}/verConsumos/{fechaInicio}/{fechaFin}")
+    public String consumosPorUsuario(@PathVariable("id") Integer id, @PathVariable("fechaInicio") String fechaInicio, @PathVariable("fechaFin") String fechaFin, Model model) {
+        model.addAttribute("consumo", consumoRepository.darConsumosUsuario(id, fechaInicio, fechaFin));
+        return "consumoUsuario";
     }
 
     @GetMapping("/consumos")

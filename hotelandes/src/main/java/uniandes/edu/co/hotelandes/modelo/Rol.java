@@ -14,12 +14,12 @@ public class Rol {
     @Id
     @SequenceGenerator(name = "sq_roles", sequenceName = "sq_roles", allocationSize = 1)
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sq_roles")
-    private Integer id;
+    private Integer id_rol;
     private String rol;
     private String descripcion;
 
-    public Rol(Integer id, String rol, String descripcion) {
-        this.id = id;
+    public Rol(Integer id_rol, String rol, String descripcion) {
+        this.id_rol = id_rol;
         this.rol = rol;
         this.descripcion = descripcion;
     }
@@ -27,11 +27,11 @@ public class Rol {
     public Rol(){;}
 
     public Integer getId() {
-        return id;
+        return id_rol;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setId(Integer id_rol) {
+        this.id_rol = id_rol;
     }
 
     public String getRol() {

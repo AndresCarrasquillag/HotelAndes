@@ -12,11 +12,20 @@ import uniandes.edu.co.hotelandes.modelo.Consumo;
 
 public interface ConsumoRepository extends JpaRepository<Consumo, Integer> {
 
+    public interface RespInfoConsumos {
+        int getFRECUENCIA();
+        int getservicios_id();
+    }
+
+    
     @Query(value = "SELECT * FROM Consumos", nativeQuery = true)
     Collection<Consumo> darConsumos();
 
-    @Query(value = "SELECT COUNT(*) as frecuencia FROM Consumos GROUP BY servicios_id ORDER BY frecuencia DESC FETCH FIRST 20 ROWS ONLY", nativeQuery = true)
-    Collection<Consumo> darServiciosPopulares();
+    @Query(value="SELECT SUM(COSTO) AS Consumo_Total FROM CONSUMOS WHERE ID_USUARIO = :id AND FECHA_DE_PAGO BETWEEN TO_DATE(:fechaInicio,'YYYY-MM-DD') AND TO_DATE(:fechaFin,'YYYY-MM-DD')", nativeQuery=true)
+    Integer darConsumosUsuario(@Param("id") Integer id, @Param("fechaInicio") String fechaInicio, @Param("fechaFin") String fechaFin);
+
+    @Query(value = "SELECT servicios_id, COUNT(*) as frecuencia FROM Consumos GROUP BY servicios_id ORDER BY frecuencia DESC FETCH FIRST 20 ROWS ONLY", nativeQuery = true)
+    Collection<RespInfoConsumos> darServiciosPopulares();
 
 
     @Query(value = "SELECT FROM Consumos WHERE id= :id", nativeQuery = true)
