@@ -22,6 +22,12 @@ public class ConsumosController {
         return "serviciosPopulares";
     }
 
+    @GetMapping("/serviciosBajaDemanda")
+    public String serviciosBajaDemanda(Model model) {
+        model.addAttribute("bajaDemanda", consumoRepository.darServiciosDeBajaDemanda());
+        return "serviciosBajaDemanda";
+    }
+
     @GetMapping("/consumos")
     public String consumos(Model model) {
         model.addAttribute("consumos", consumoRepository.darConsumos());
