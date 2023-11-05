@@ -26,6 +26,11 @@ public class ConsumosController {
     public String serviciosBajaDemanda(Model model) {
         model.addAttribute("bajaDemanda", consumoRepository.darServiciosDeBajaDemanda());
         return "serviciosBajaDemanda";
+        
+    @GetMapping("/usuarios/{id}/verConsumos/{fechaInicio}/{fechaFin}")
+    public String consumosPorUsuario(@PathVariable("id") Integer id, @PathVariable("fechaInicio") String fechaInicio, @PathVariable("fechaFin") String fechaFin, Model model) {
+        model.addAttribute("consumo", consumoRepository.darConsumosUsuario(id, fechaInicio, fechaFin));
+        return "consumoUsuario";
     }
 
     @GetMapping("/consumos")
