@@ -22,18 +22,18 @@
                         </a>
                     </h5>
                     <div id="busqueda" class="collapse">
-                        <form th:action="@{servicios}" method="get">
+                        <form th:action="@{/serviciosConsumos}" method="get">
                             <label class="col-form-label">Costo 1:</label>
                             <input class="form-control" type="text" id="costo1" name="costo1"/>
                             <label class="col-form-label">Costo 2:</label>
-                            <input class="form-control" type="text2" id="costo" name="costo2"/>
+                            <input class="form-control" type="text2" id="costo2" name="costo2"/>
                             <label class="col-form-label">Fecha Inicio:</label>
                             <input class="form-control" type="text" id="fechaInicio" name="fechaInicio"/>
                             <label class="col-form-label">Fecha Fin:</label>
                             <input class="form-control" type="text" id="fechaFin" name="FechaFin"/>
                             <label class="col-form-label">Tipo de servicio:</label>
-                            <select class="form-control" id="tipo" name="tipo">
-                                <option th:text="Alojamiento"></option>
+                            <select class="form-control" id="tipo_servicio" name="tipo_servicio">
+                                <option th:text="alojamiento"></option>
                                 <option th:text="Piscina"></option>
                                 <option th:text="Salón"></option>
                                 <option th:text="Prestamo"></option>
@@ -44,10 +44,10 @@
                                 <option th:text="Restaurante"></option>
                                 <option th:text="Supermercado"></option>
                                 <option th:text="Bar"></option>
-                                <option th:text="Ninguno"></option>
+                                <option th:text="tipo1"></option>
                             </select>
                             <div class="text-center">
-                                <button type="subimit" class="btn btn-secondary">Buscar por tales</button>
+                                <button th:href="@{/serviciosPopularesForm}" class="btn btn-secondary">Filtrar</button>
                             </div>
                         </form>
                     </div>
