@@ -28,7 +28,8 @@ public class GerenteController {
 
     @GetMapping("/gerente/{usuario}/{contraseña}")
     public String gerente(@PathVariable("usuario") String usuario, @PathVariable("contraseña") String contraseña, Model model) {
-        if (usuarioRepository.logIn(usuario, contraseña) != -1){
+        int vartemp = usuarioRepository.logIn(usuario, contraseña);
+        if ( vartemp != -1 && vartemp ==3){
             model.addAttribute("rol", usuarioRepository.logIn(usuario, contraseña));
             return "consolaGerente";
         }
@@ -42,9 +43,8 @@ public class GerenteController {
     }
 
     @GetMapping("gerente/clientesExcelentes/estaciaTrimestral")
-    public String clientesExcelentesEstanciaTrimestral(){
-        
-        model.addAttribute("clientes", usuarioRepository.estanciasTrimestrales())
+    public String clientesExcelentesEstanciaTrimestral(Model model){
+        model.addAttribute("clientes", usuarioRepository.estanciasTrimestrales());
         return "clientesExcelentesFiltrar";
     }
 
