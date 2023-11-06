@@ -38,7 +38,7 @@ public class ServiciosController {
         }
 
         if (costo2 == null || costo2.equals("")) {
-            costo1 = "10000000";
+            costo2 = "999999999";
         }
 
         model.addAttribute("filtrosServicios", servicioRepository.darServiciosCombinado(fechaInicio, fechaFin, Integer.parseInt(costo1), Integer.parseInt(costo2), tipo_servicio));
