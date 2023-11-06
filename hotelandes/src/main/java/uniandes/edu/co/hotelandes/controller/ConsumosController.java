@@ -21,12 +21,12 @@ public class ConsumosController {
         return "buenosClientesPorConsumo";
     }
 
-    @GetMapping("/serviciosPopulares")
+    /**@GetMapping("/serviciosPopulares")
     public String serviciosPopulares(Model model) {
         //Collection<RespInfoConsumos> frec = consumoRepository.darServiciosPopulares();
         model.addAttribute("populares", consumoRepository.darServiciosPopulares());
         return "serviciosPopulares";
-    }
+    }**/
 
     @GetMapping("/serviciosBajaDemanda")
     public String serviciosBajaDemanda(Model model) {
@@ -91,6 +91,14 @@ public class ConsumosController {
         return "habitacionesIngresos";
     }
 
+    @GetMapping("/serviciosPopulares/{fechaInicio}/{fechaFin}")
+    public String serviciosPopulares(@PathVariable("fechaInicio") String fechaInicio, @PathVariable("fechaFin") String fechaFin, Model model) {
+        model.addAttribute("populares", consumoRepository.darServiciosPopulares(fechaInicio, fechaFin));
+        return "serviciosPopulares";
+    }
 
-
+    @GetMapping("/serviciosPopularesForm")
+    public String serviciosPopularesForm(Model model) {
+        return "serviciosPopularesForm";
+    }
 }
