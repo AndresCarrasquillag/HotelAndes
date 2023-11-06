@@ -29,11 +29,10 @@
                     <td th:text="${habitacion.sede}"></td>
                     <td th:text="${habitacion.tipoHabitacion}"></td>
                     <td>
-                        <div class="btn-group">
-                            <a th:href="@{'/habitaciones/' + ${habitacion.id} + '/edit'}" class="btn btn-warning btn-sm">Editar</a>
-                            <a th:href="@{'/habitaciones/' + ${habitacion.id} + '/delete'}" class="btn btn-danger btn-sm" onclick="return confirm('¿Seguro de borrar la habitacion?')">Borrar</a>
-                            <a th:href="@{'/habitaciones/' + ${habitacion.id} + '/verIngresosForm'}" class="btn btn-success btn-sm">Ver ingresos</a>
-                        </div>
+                        <a th:href="@{'/habitaciones/'+${habitacion.id}+'/edit'}" class="btn btn-warning btn-sm">Editar</a>
+                        <a th:href="@{'/habitaciones/'+${habitacion.id}+'/delete'}" class="btn btn-danger btn-sm" onclick="return confirm('¿Seguro de borrar la habitacion?')">Borrar</a>
+                        <a th:href="@{'/habitaciones/'+${habitacion.id}+'/verIngresosForm'}" class="btn btn-success  btn-sm" >Ver ingresos</a>
+                        <a th:href="@{'/habitaciones/'+${habitacion.id}+'/ocupacionAnio'}" class="btn btn-success  btn-sm" >% de ocupacion en el ultimo anio</a>
                     </td>
                 </tr>
             </tbody>

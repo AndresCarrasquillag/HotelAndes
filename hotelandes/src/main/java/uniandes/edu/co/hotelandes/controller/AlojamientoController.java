@@ -16,6 +16,12 @@ public class AlojamientoController {
     @Autowired
     private AlojamientoRepository alojamientoRepository;
 
+    @GetMapping("/habitaciones/{id}/ocupacionAnio")
+    public String ocupacionHabitacion(@PathVariable("id") int id, Model model){
+        model.addAttribute("ocupacion", alojamientoRepository.darOcupacionHabitacion(id));
+        return "ocupacionHabitacion";
+    }
+
     @GetMapping("/alojamientos")
     public String alojamientos(Model model){
         model.addAttribute("Alojamientos", alojamientoRepository.darAlojamientos());
@@ -29,7 +35,7 @@ public class AlojamientoController {
     }
     @PostMapping("/alojamientos/new/save")
     public String alojamientoGuardar(@ModelAttribute Alojamiento alojamiento){
-        alojamientoRepository.insertarAlojamiento(alojamiento.getUsuario_id().getId(), alojamiento.getCheck_in().getId(), alojamiento.getCheck_out().getId());
+        alojamientoRepository.insertarAlojamiento(alojamiento.getUsuario().getId(), alojamiento.getFecha_ingreso(), alojamiento.getFecha_salida());
         return "redirect:/alojamientos";
     }
 
@@ -47,7 +53,7 @@ public class AlojamientoController {
 
     @PostMapping("/alojamientos/{id}/edit/save")
     public String alojamientoEditarGuardar(@PathVariable("id") int id, @ModelAttribute Alojamiento alojamiento){
-        alojamientoRepository.updateAlojamiento(id, alojamiento.getCheck_in().getId(), alojamiento.getCheck_out().getId());
+        alojamientoRepository.updateAlojamiento(id, alojamiento.getFecha_ingreso(), alojamiento.getFecha_salida());
         return "redirect:/alojamientos";
 
     }
