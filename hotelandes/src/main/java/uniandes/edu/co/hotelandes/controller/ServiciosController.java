@@ -23,6 +23,17 @@ public class ServiciosController {
         return "servicios";
     }
 
+    @GetMapping("/serviciosCaracteristica")
+    public String serviciosCaracteristica(Model model) {
+        return "serviciosCaracteristicaElegir";
+    }
+
+    @GetMapping("/serviciosPorPrecioEnRango")
+    public String serviciosPorPrecioEnRango(Model model) {
+        return "serviciosPorPrecioEnRango";
+    }
+
+
     @GetMapping("/servicios/new")
     public String servicioForm(Model model) {
         model.addAttribute("servicio", new Servicio());
