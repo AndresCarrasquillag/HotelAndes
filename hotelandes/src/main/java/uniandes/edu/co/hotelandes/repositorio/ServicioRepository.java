@@ -19,6 +19,9 @@ public interface ServicioRepository extends JpaRepository<Servicio, Integer> {
     @Query(value = "SELECT * FROM Servicios WHERE id= :id", nativeQuery = true)
     Servicio darServicio(@Param("id") Integer id);
 
+    @Query(value = "SELECT * FROM Servicios WHERE COSTO BETWEEN :precioBajo AND :precioAlto", nativeQuery = true)
+    Collection<Servicio> darServiciosPorPrecioEnRango(@Param("precioBajo") Integer precioBajo, @Param("precioAlto") Integer precioAlto);
+
     @Modifying
     @Transactional
     @Query(value = "INSERT INTO Servicios(id, horario, costo, tipo_servicio) VALUES(1, :horario, :costo, :tipo)", nativeQuery = true)
