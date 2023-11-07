@@ -65,5 +65,10 @@ public class AlojamientoController {
         return "redirect:/alojamientos";
     }
 
+    @GetMapping("/buenosClientesAlojamiento")
+    public String buenosClientesAlojamiento(Model model) {
+        model.addAttribute("clientes", alojamientoRepository.darBuenosClientesPorAlojamiento());
+        return "buenosClientesPorAlojamiento";
+    }
 }
  

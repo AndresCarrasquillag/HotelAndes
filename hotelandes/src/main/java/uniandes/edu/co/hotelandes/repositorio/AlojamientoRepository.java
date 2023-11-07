@@ -8,9 +8,12 @@ import org.springframework.transaction.annotation.Transactional;
 import uniandes.edu.co.hotelandes.modelo.Alojamiento;
 
 public interface AlojamientoRepository extends JpaRepository<Alojamiento, Integer>  {
- 
 
-        
+    public interface RespInfoAlojamientos {
+        int getSuma_dias();
+        int getUsuario();
+    }
+
     @Query(value = "SELECT * FROM Alojamiento", nativeQuery = true)
     Collection<Alojamiento> darAlojamientos();
 
@@ -35,4 +38,14 @@ public interface AlojamientoRepository extends JpaRepository<Alojamiento, Intege
     @Query(value = "DELETE FROM Alojamiento WHERE id= :id", nativeQuery = true)
     void deleteAlojamiento(@Param("id") Integer id);
 
+    @Query(value = "SELECT usuario_id AS Usuario, NVL(Suma_dias, 0) AS Suma_dias\r\n" + //
+            "FROM (\r\n" + //
+            "    SELECT ALOJAMIENTO.USUARIO AS usuario_id, \r\n" + //
+            "           SUM(alojamiento.fecha_salida - alojamiento.fecha_ingreso) AS Suma_dias \r\n" + //
+            "    FROM alojamiento \r\n" + //
+            "    WHERE alojamiento.fecha_ingreso BETWEEN ADD_MONTHS(SYSDATE, -12) AND SYSDATE \r\n" + //
+            "    GROUP BY ALOJAMIENTO.USUARIO\r\n" + //
+            ") \r\n" + //
+            "WHERE Suma_dias > 14", nativeQuery = true)
+    Collection<RespInfoAlojamientos> darBuenosClientesPorAlojamiento();
 }

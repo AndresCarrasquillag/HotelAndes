@@ -23,22 +23,28 @@ public class ServiciosController {
         return "servicios";
     }
 
-    @GetMapping("/serviciosCaracteristica")
-    public String serviciosCaracteristica(Model model) {
-        return "serviciosCaracteristicaElegir";
-    }
+    @GetMapping("/serviciosConsumos")
+    public String serviciosConsumos(Model model, String fechaInicio, String fechaFin, String tipo_servicio, String costo1, String costo2) {
+        if (fechaInicio == null || fechaInicio.equals("")) {
+            fechaInicio = "1000-12-12";
+        }
 
-    @GetMapping("/serviciosPorPrecioEnRangoForm")
-    public String serviciosPorPrecioEnRango(Model model) {
-        return "serviciosPorPrecioEnRangoForm";
-    }
+        if (fechaFin == null || fechaFin.equals("")) {
+            fechaFin = "5000-12-12";
+        }
 
-    @GetMapping("/serviciosPorPrecioEnRango/{precioBajo}/{precioAlto}")
-    public String serviciosPorPrecioEnRango(@PathVariable("precioBajo") Integer precioBajo, @PathVariable("precioAlto") Integer precioAlto, Model model) {
-        model.addAttribute("serviciosPorPrecioEnRango", servicioRepository.darServiciosPorPrecioEnRango(precioBajo, precioAlto));
-        return "serviciosPorPrecioEnRango";
-    }
+        if (costo1 == null || costo1.equals("")) {
+            costo1 = "0";
+        }
 
+        if (costo2 == null || costo2.equals("")) {
+            costo2 = "999999999";
+        }
+
+        model.addAttribute("filtrosServicios", servicioRepository.darServiciosCombinado(fechaInicio, fechaFin, Integer.parseInt(costo1), Integer.parseInt(costo2), tipo_servicio));
+
+        return "serviciosFiltro";
+    }
 
     @GetMapping("/servicios/new")
     public String servicioForm(Model model) {
