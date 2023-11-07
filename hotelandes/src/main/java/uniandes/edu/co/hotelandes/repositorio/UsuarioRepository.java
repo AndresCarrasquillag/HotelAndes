@@ -17,8 +17,8 @@ public interface UsuarioRepository extends JpaRepository<Usuario, Integer> {
     @Query(value = "SELECT NVL((SELECT roles.id_rol FROM usuarios INNER JOIN roles ON roles.id_rol = usuarios.roles_id_rol WHERE usuarios.\"user\" = :usuario AND usuarios.\"PASSWORD\" = :contraseña), -1) FROM dual", nativeQuery = true)
     Integer logIn(@Param("usuario") String usuario, @Param("contraseña") String contraseña);
 
-    @Query(value = "SELECT NVL(SELECT roles.id_rol FROM usuarios INNER JOIN roles ON roles.id_rol = usuarios.roles_id_rol WHERE usuarios.\"user\" = :usuario AND usuarios.\"PASSWORD\" = :contraseña), 'no hay clientes excelentes de este tipo') FROM dual", nativeQuery = true)
-    Integer estanciasTrimestrales();
+    @Query(value = "SELECT id FROM (SELECT EXTRACT(YEAR FROM alojamiento.fecha_ingreso) AS year, CEIL(EXTRACT(MONTH FROM alojamiento.fecha_ingreso) / 3) AS quarter, usuarios.id FROM alojamiento INNER JOIN usuarios ON alojamiento.usuario = usuarios.id GROUP BY EXTRACT(YEAR FROM alojamiento.fecha_ingreso), CEIL(EXTRACT(MONTH FROM alojamiento.fecha_ingreso) / 3), usuarios.id) GROUP BY id HAVING COUNT(*) > 3", nativeQuery = true)
+    Collection<Integer> estanciasTrimestrales();
 
     @Query(value = "SELECT ID, user, PASSWORD, NOMBRE, TELEFONO, ROLES_ID_ROL, ALOJAMIENTO_ID1 FROM Usuarios WHERE id= :id", nativeQuery = true)
     Usuario darUsuario(@Param("id") Integer id);

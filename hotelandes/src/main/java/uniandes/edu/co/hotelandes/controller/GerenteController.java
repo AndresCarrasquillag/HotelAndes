@@ -33,19 +33,25 @@ public class GerenteController {
             model.addAttribute("rol", usuarioRepository.logIn(usuario, contraseña));
             return "consolaGerente";
         }
-        return "redirect:/";
+        return "malIngresoGerente";
         
     }
 
-    @GetMapping("gerente/clientesExcelentes")
+    @GetMapping("/gerente/clientesExcelentes")
     public String clientesExcelentes(){
         return "clientesExcelentesFiltrar";
     }
 
-    @GetMapping("gerente/clientesExcelentes/estaciaTrimestral")
+    @GetMapping("/clientesExcelentes/estanciaTrimestral")
     public String clientesExcelentesEstanciaTrimestral(Model model){
         model.addAttribute("clientes", usuarioRepository.estanciasTrimestrales());
-        return "clientesExcelentesFiltrar";
+        return "clientesExcelentesEstancia";
     }
 
+
+    @GetMapping("/gerente/clientesExcelentes/porServicio/")
+    public String clientesExcelentesServicio(Model model){
+        model.addAttribute("clientes", usuarioRepository.estanciasTrimestrales());
+        return "clientesExcelentesEstancia";
+    }
 }
