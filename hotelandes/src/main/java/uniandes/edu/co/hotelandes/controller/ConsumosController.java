@@ -15,6 +15,12 @@ public class ConsumosController {
     @Autowired
     private ConsumoRepository consumoRepository;
 
+    @GetMapping("/fechasMayoresIngresos")
+    public String fechasConMayoresIngresos(Model model) {
+        model.addAttribute("fechas", consumoRepository.darFechasConMayorIngreso());
+        return "fechasIngresos";
+    }
+
     @GetMapping("/buenosClientesConsumo")
     public String buenosClientesPorConsumo(Model model) {
         model.addAttribute("buenosClientes", consumoRepository.darBuenosClientesPorConsumo());
