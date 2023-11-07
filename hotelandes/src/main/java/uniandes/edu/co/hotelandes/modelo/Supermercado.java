@@ -1,44 +1,54 @@
 package uniandes.edu.co.hotelandes.modelo;
 
-import jakarta.persistence.EmbeddedId;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
+
 
 @Entity
 @Table(name = "Supermercado")
-public class Supermercado{
-    @EmbeddedId
-    private SupermercadoPK pk;
+public class Supermercado {
+    @Id
+    private Integer id;
+
+    @OneToOne
+    @JoinColumn(name = "id")
+    private Servicio servicio;
+
     private String nombre;
 
-    public Supermercado(){
-        ;
+    public Supermercado() {
     }
 
-    public Supermercado(Servicio id, String nombre){
-        this.pk = new SupermercadoPK(id);
-        this.nombre = nombre; 
+    public Supermercado(Servicio servicio, String nombre) {
+        this.servicio = servicio;
+        this.nombre = nombre;
 
     }
 
-    public SupermercadoPK getPk() {
-        return pk;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getNombre() {
         return nombre;
     }
 
-    public void setPk(SupermercadoPK pk) {
-        this.pk = pk;
-    }
-
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
-    
+    public Servicio getServicio() {
+        return servicio;
+    }
+
+    public void setServicio(Servicio servicio) {
+        this.servicio = servicio;
+    }
 
 
-    
+
 }

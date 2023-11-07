@@ -1,7 +1,5 @@
 package uniandes.edu.co.hotelandes.controller;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -21,10 +19,11 @@ public class SupermercadoController {
     
 
     @Autowired
+    private ServicioRepository servicioRepository;
+    @Autowired
     private SupermercadoRepository supermercadoRepository;
 
-    @Autowired
-    private ServicioRepository servicioRepository;
+    
 
     @GetMapping("/supermercados")
     public String supermercados(Model model) {
@@ -39,8 +38,9 @@ public class SupermercadoController {
     }
 
     @PostMapping("/supermercados/new/save")
-    public String supermercadoGuardar(@ModelAttribute Supermercado supermercado) {
-        supermercadoRepository.insertarSupermercado(supermercado.getNombre());
+    public String supermercadoGuardar(@ModelAttribute Servicio servicio,@ModelAttribute Supermercado supermercado) {
+        servicioRepository.save(servicio);  //<------- aqui salva e; servicio
+        supermercadoRepository.insertarSupermercado(servicio.getId(),supermercado.getNombre());
         return "redirect:/supermercados";
     }
 

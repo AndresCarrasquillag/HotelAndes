@@ -2,6 +2,9 @@ package uniandes.edu.co.hotelandes.modelo;
 
 import java.util.Date;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -14,20 +17,27 @@ import jakarta.persistence.Table;
 public class Servicio {
     
     @Id
-    @SequenceGenerator(name = "sq_servicio", sequenceName = "sq_servicio", allocationSize = 1)
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sq_servicio")
+    @SequenceGenerator(name = "sq_servicios", sequenceName = "sq_servicios", allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sq_servicios")
     private Integer id;
+    // Importante colocar el formato de la fecha
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date horario_de_servicio;
     private Integer costo;
     private String tipo_servicio;
     
+
     
+
+    public Servicio(){}
 
     public Servicio(Integer id, Date horario_de_servicio, Integer costo, String tipo_servicio) {
         this.id = id;
-        this.horario_de_servicio = horario_de_servicio;
         this.costo = costo;
         this.tipo_servicio = tipo_servicio;
+        this.horario_de_servicio = horario_de_servicio;
+        
+        
     }
     public String getTipo_servicio() {
         return tipo_servicio;
@@ -37,7 +47,6 @@ public class Servicio {
         this.tipo_servicio = tipo_servicio;
     }
 
-    public Servicio(){;}
 
     public Integer getId() {
         return id;
