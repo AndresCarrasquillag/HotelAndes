@@ -7,34 +7,36 @@ import jakarta.persistence.Table;
 @Entity
 @Table(name = "Alojamiento")
 public class Alojamiento {
-
-
-
     @EmbeddedId
     private AlojamientoPK pk;
+    private String fecha_ingreso;
+    private String fecha_salida;
+
+    
     
     @OneToOne
-    @JoinColumn(name = "usuario_alojamiento_id", referencedColumnName = "id")
-    private Usuario usuario_id;
+    @JoinColumn(name = "habitacion", referencedColumnName = "id")
+    private Habitacion habitacion;
 
     @OneToOne
-    @JoinColumn(name = "check_in_alojamiento_id", referencedColumnName = "id")
-    private Check_In check_in;
-
-    @OneToOne
-    @JoinColumn(name = "check_out_alojamiento_id", referencedColumnName = "id")
-    private Check_out check_out;
+    @JoinColumn(name = "usuario", referencedColumnName = "id")
+    private Usuario usuario;
 
 
     public Alojamiento(){;}
 
+    
 
-    public Alojamiento(Servicio id, Usuario usuario, Check_In check_In, Check_out check_Out) {
+    public Alojamiento(Servicio id, String fecha_ingreso, String fecha_salida, Habitacion habitacion,
+            Usuario usuario) {
         this.pk = new AlojamientoPK(id);
-        this.usuario_id = usuario;
-        this.check_in = check_In;
-        this.check_out = check_Out;
+        this.fecha_ingreso = fecha_ingreso;
+        this.fecha_salida = fecha_salida;
+        this.habitacion = habitacion;
+        this.usuario = usuario;
     }
+
+
 
     public AlojamientoPK getPk() {
         return pk;
@@ -44,28 +46,43 @@ public class Alojamiento {
         this.pk = pk;
     }
 
-    public Usuario getUsuario_id() {
-        return usuario_id;
+    public String getFecha_ingreso() {
+        return fecha_ingreso;
     }
 
-    public void setUsuario_id(Usuario usuario_id) {
-        this.usuario_id = usuario_id;
+
+    public void setFecha_ingreso(String fecha_ingreso) {
+        this.fecha_ingreso = fecha_ingreso;
     }
 
-    public Check_In getCheck_in() {
-        return check_in;
+
+    public String getFecha_salida() {
+        return fecha_salida;
     }
 
-    public void setCheck_in(Check_In check_in) {
-        this.check_in = check_in;
+
+    public void setFecha_salida(String fecha_salida) {
+        this.fecha_salida = fecha_salida;
     }
 
-    public Check_out getCheck_out() {
-        return check_out;
+
+    public Habitacion getHabitacion() {
+        return habitacion;
     }
 
-    public void setCheck_out(Check_out check_out) {
-        this.check_out = check_out;
+
+    public void setHabitacion(Habitacion habitacion) {
+        this.habitacion = habitacion;
+    }
+
+
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
     }
 
     
