@@ -28,8 +28,14 @@ public class ServiciosController {
         return "serviciosCaracteristicaElegir";
     }
 
-    @GetMapping("/serviciosPorPrecioEnRango")
+    @GetMapping("/serviciosPorPrecioEnRangoForm")
     public String serviciosPorPrecioEnRango(Model model) {
+        return "serviciosPorPrecioEnRangoForm";
+    }
+
+    @GetMapping("/serviciosPorPrecioEnRango/{precioBajo}/{precioAlto}")
+    public String serviciosPorPrecioEnRango(@PathVariable("precioBajo") Integer precioBajo, @PathVariable("precioAlto") Integer precioAlto, Model model) {
+        model.addAttribute("serviciosPorPrecioEnRango", servicioRepository.darServiciosPorPrecioEnRango(precioBajo, precioAlto));
         return "serviciosPorPrecioEnRango";
     }
 
