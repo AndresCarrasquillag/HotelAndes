@@ -2,6 +2,41 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Cargar_datos_servicios",
+            "request": "launch",
+            "mainClass": "uniandes.edu.co.hotelandes.Carga_de_datos.Cargar_datos_servicios",
+            "projectName": "hotelandes"
+        },
+        {
+            "type": "java",
+            "name": "carga_datos_piscina",
+            "request": "launch",
+            "mainClass": "uniandes.edu.co.hotelandes.Carga_de_datos.carga_datos_piscina",
+            "projectName": "hotelandes"
+        },
+        {
+            "type": "java",
+            "name": "Cargar_datos_cartas",
+            "request": "launch",
+            "mainClass": "uniandes.edu.co.hotelandes.Carga_de_datos.Cargar_datos_cartas",
+            "projectName": "hotelandes"
+        },
+        {
+            "type": "java",
+            "name": "Carga_datos_spa",
+            "request": "launch",
+            "mainClass": "uniandes.edu.co.hotelandes.Carga_de_datos.Carga_datos_spa",
+            "projectName": "hotelandes"
+        },
+        {
+            "type": "java",
+            "name": "Carga_datos_productos",
+            "request": "launch",
+            "mainClass": "uniandes.edu.co.hotelandes.carga_de_datos.Carga_datos_productos",
+            "projectName": "hotelandes"
+        },
+        {
+            "type": "java",
             "name": "Spring Boot-HotelandesApplication<hotelandes>",
             "request": "launch",
             "cwd": "${workspaceFolder}",
