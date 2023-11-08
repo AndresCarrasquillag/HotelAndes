@@ -2,6 +2,34 @@
     "configurations": [
         {
             "type": "java",
+            "name": "carga_datos_tienda",
+            "request": "launch",
+            "mainClass": "uniandes.edu.co.hotelandes.Carga_de_datos.carga_datos_tienda",
+            "projectName": "hotelandes"
+        },
+        {
+            "type": "java",
+            "name": "carga_datos_usuario",
+            "request": "launch",
+            "mainClass": "uniandes.edu.co.hotelandes.Carga_de_datos.carga_datos_usuario",
+            "projectName": "hotelandes"
+        },
+        {
+            "type": "java",
+            "name": "carga_datos_roles",
+            "request": "launch",
+            "mainClass": "uniandes.edu.co.hotelandes.Carga_de_datos.carga_datos_roles",
+            "projectName": "hotelandes"
+        },
+        {
+            "type": "java",
+            "name": "carga_datos_alojamiento",
+            "request": "launch",
+            "mainClass": "uniandes.edu.co.hotelandes.Carga_de_datos.carga_datos_alojamiento",
+            "projectName": "hotelandes"
+        },
+        {
+            "type": "java",
             "name": "Cargar_datos_servicios",
             "request": "launch",
             "mainClass": "uniandes.edu.co.hotelandes.Carga_de_datos.Cargar_datos_servicios",
