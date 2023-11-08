@@ -15,7 +15,7 @@ public interface ConsumoRepository extends JpaRepository<Consumo, Integer> {
     @Query(value = "SELECT * FROM Consumos", nativeQuery = true)
     Collection<Consumo> darConsumos();
 
-    @Query(value = "SELECT FROM Consumos WHERE id= :id", nativeQuery = true)
+    @Query(value = "SELECT * FROM Consumos WHERE id= :id", nativeQuery = true)
     Consumo darConsumo(@Param("id") Integer id);
 
     @Modifying

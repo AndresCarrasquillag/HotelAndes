@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ver Ingresos formulario</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    
+    <div class="container mt-5">
+        <h1>Ingresa la fecha de hoy</h1>
+        <form id="miFormulario">
+            <input type="text" id="entradaUsuario" placeholder="Introduce un string">
+            <input type="submit" value="Enviar">
+        </form>
+        
+        </form>
+    </div>
+    
+    <script>
+    document.getElementById('dateInput').addEventListener('change', function() {
+    const dateValue = this.value;
+    const baseAction = `/habitaciones/${document.getElementById('habitacionId').value}`;
+    const newAction = `${baseAction}/verIngresos/${dateValue}`;
+    document.getElementById('ingresosForm').setAttribute('action', newAction);
+});
+
+    </script>
+    
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

@@ -53,6 +53,15 @@ public class HabitacionesController {
         return "redirect:/habitaciones";
     }
 
+    @PostMapping("/habitaciones/{id}/verIngresos")
+    public String habitacionVerIngresos(@PathVariable("id") Integer id, @ModelAttribute Habitacion habitacion) {
+        habitacionRepository.verIngresos(id);
+        return "redirect:/ingresosHabitaciones";
+    }
+    @GetMapping("/habitaciones/{id}/verIngresosFormulario")
+    public String habitacionVerIngresosFormulario(@PathVariable("id") Integer id, @ModelAttribute Habitacion habitacion) {
+        return "ingresosHabitacionesFormulario";
+    }
 
     @GetMapping("/habitaciones/{id}/delete")
     public String habitacionEliminar(@PathVariable("id") Integer id) {
