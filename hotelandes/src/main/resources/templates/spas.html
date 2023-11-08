@@ -15,28 +15,30 @@
                     <th>id</th>
                     <th>duracion</th>
                     <th>tipo_servisio</th>
-                    <th>horario de servicio</th>
                     <th>costo</th>
+                    <th>horario de servicio</th>
+                    
                     
 
                 </tr>
             </thead>
             <tbody>
                 <tr th:each="spa : ${spas}">
-                    <td th:text="${spa.pk.id.id}"></td>
+                    <td th:text="${spa.id}"></td>
                     <td th:text="${spa.duracion}"></td>
-                    <td th:text="${spa.tipo_servisio}"></td>
-                    <td th:text="${spa.pk.id.horario_de_servicio}"></td>
-                    <td th:text="${spa.pk.id.costo}"></td>
+                    <td th:text="${spa.tipo_servicio}"></td>
+                    <td th:text="${spa.servicio.costo}"></td>
+                    <td th:text="${spa.servicio.horario_de_servicio}"></td>
 
                     <td>
-                        <a th:href="@{'/spas/'+${spa.id}+'/edit'}" class="btn btn-warning btn-sm">Editar</a>
-                        <a th:href="@{'/spas/'+${spa.id}+'/delete'}" class="btn btn-danger btn-sm" onclick="return confirm('¿Seguro de borrar el spa?')">Borrar</a>
+                        <a th:href="@{'/spas/' + ${spa.id} + '/edit'}" class="btn btn-warning btn-sm">Editar</a>
+                        <a th:href="@{'/spas/' + ${spa.id} + '/delete'}" class="btn btn-danger btn-sm" onclick="return confirm('¿Seguro de borrar el spa?')">Borrar</a>
                     </td>
                 </tr>
             </tbody>
         </table>
         <a th:href="@{/servicios}" class="btn btn-primary">Volver atrás</a>
+        <a th:href="@{spas/new}" class="btn btn-primary">Añadir spa</a>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>

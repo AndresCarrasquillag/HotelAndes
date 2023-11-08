@@ -19,7 +19,7 @@ public class ServiciosController {
     
     @GetMapping("/servicios")
     public String servicios(Model model) {
-        model.addAttribute("servicios", servicioRepository.darServicios());
+       //model.addAttribute("servicios", servicioRepository.darServicios());
         return "servicios";
     }
 

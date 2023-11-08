@@ -19,13 +19,13 @@ public interface SpaRepository extends JpaRepository<Spa, Integer> {
 
     @Modifying
     @Transactional
-    @Query(value = "INSERT INTO Spa(id, duracion, tipo_servicio) VALUES(1, :duracion, :tipo_servicio)", nativeQuery = true)
-    void insertSpa(@Param("duracion") String duracion, @Param("tipo_servicio") String tipo_servicio);
+    @Query(value = "INSERT INTO Spa(id, duracion, tipo_servicio) VALUES(:id, :duracion, :tipo_servicio)", nativeQuery = true)
+    void insertSpa(@Param("id") Integer id, @Param("duracion") Integer duracion, @Param("tipo_servicio") String tipo_servicio);
 
     @Modifying
     @Transactional
     @Query(value = "UPDATE Spa SET duracion= :duracion, tipo_servicio= :tipo_servicio WHERE id= :id", nativeQuery = true)
-    void updateSpa(@Param("id") Integer id, @Param("duracion") String duracion, @Param("tipo_servicio") String Tipo_servicio);
+    void updateSpa(@Param("id") Integer id, @Param("duracion") Integer duracion, @Param("tipo_servicio") String Tipo_servicio);
     
     @Modifying
     @Transactional
