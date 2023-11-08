@@ -27,7 +27,7 @@ public class Cargar_datos_servicios {
                 String tipoServicio = tipos[random.nextInt(tipos.length)];
 
                 long milisHoy = System.currentTimeMillis();
-                long milis10Anios = 10L * 365 * 24 * 60 * 60 * 1000; // Milisegundos en 10 años.
+                long milis10Anios = 10L * 365 * 24 * 60 * 60 * 1000;
                 long milisFechaAleatoria = ThreadLocalRandom.current().nextLong(milisHoy - milis10Anios, milisHoy);
                 java.sql.Date fechaAleatoria = new java.sql.Date(milisFechaAleatoria);
 
