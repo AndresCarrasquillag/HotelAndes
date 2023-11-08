@@ -18,7 +18,7 @@ public class Sede {
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sq_sedes")
     private Integer id;
     private String nombre;
-    private String telefono;
+    private Integer telefono;
     private String direccion;
 
     @ManyToOne
@@ -26,7 +26,7 @@ public class Sede {
     private Hotel hotel;
 
 
-    public Sede(Integer id, String nombre, String telefono, String direccion, Hotel hotel) {
+    public Sede(Integer id, String nombre, Integer telefono, String direccion, Hotel hotel) {
         this.id = id;
         this.nombre = nombre;
         this.telefono = telefono;
@@ -51,7 +51,7 @@ public class Sede {
         return nombre;
     }
 
-    public String getTelefono() {
+    public Integer getTelefono() {
         return telefono;
     }
 
@@ -67,7 +67,7 @@ public class Sede {
         this.nombre = nombre;
     }
 
-    public void setTelefono(String telefono) {
+    public void setTelefono(Integer telefono) {
         this.telefono = telefono;
     }
 

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear plan de consumo</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.min.css}"/>
+</head>
+<body>
+    <form action="#" th:action="@{/planesDeConsumo/new/save}" method="post">
+        <div th:replace="~{fragments/planDeConsumoForm :: planDeConsumoForm(titulo='Crear plan de consumo')}"></div>
+    </form>
+</body>
+</html>

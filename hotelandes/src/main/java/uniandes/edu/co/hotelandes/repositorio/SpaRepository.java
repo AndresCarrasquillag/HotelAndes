@@ -14,7 +14,7 @@ public interface SpaRepository extends JpaRepository<Spa, Integer> {
       @Query(value = "SELECT * FROM Spa", nativeQuery = true)
     Collection<Spa> darSpas();
 
-    @Query(value = "SELECT FROM Spa WHERE id= :id", nativeQuery = true)
+    @Query(value = "SELECT * FROM Spa WHERE id= :id", nativeQuery = true)
     Spa darSpa(@Param("id") Integer id);
 
     @Modifying
@@ -24,8 +24,8 @@ public interface SpaRepository extends JpaRepository<Spa, Integer> {
 
     @Modifying
     @Transactional
-    @Query(value = "UPDATE Spa duracion= :duracion, Tipo_servicio= :Tipo_servicio WHERE id= :id", nativeQuery = true)
-    void updateSpa(@Param("id") Integer id, @Param("duracion") String duracion, @Param("Tipo_servicio") String Tipo_servicio);
+    @Query(value = "UPDATE Spa SET duracion= :duracion, tipo_servicio= :tipo_servicio WHERE id= :id", nativeQuery = true)
+    void updateSpa(@Param("id") Integer id, @Param("duracion") String duracion, @Param("tipo_servicio") String Tipo_servicio);
     
     @Modifying
     @Transactional

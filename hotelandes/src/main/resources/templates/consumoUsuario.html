@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consumos</title>
+    <link rel="Stylesheet" type="text/css" th:href="@{/css/bootstrap.min.css}"/>
+</head>
+<body>
+    <div class="m-5">
+        <h1>Consumo del usuario</h1>
+        <div>
+            <span th:text="${consumo}">Default Consumo Value</span>
+        </div>
+
+        <div>
+            <a th:href="@{/}" class="btn btn-primary">Volver atrás</a>
+        </div>
+    </div>
+</body>
+</html>

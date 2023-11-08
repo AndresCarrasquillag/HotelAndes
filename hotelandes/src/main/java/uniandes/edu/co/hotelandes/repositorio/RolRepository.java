@@ -15,8 +15,8 @@ public interface RolRepository extends JpaRepository<Rol, Integer> {
     @Query(value = "SELECT * FROM Roles", nativeQuery = true)
     Collection<Rol> darRoles();
 
-    @Query(value = "SELECT FROM Roles WHERE id= :id", nativeQuery = true)
-    Rol darRol(@Param("id") Integer id);
+    @Query(value = "SELECT * FROM Roles WHERE id_rol= :id_rol", nativeQuery = true)
+    Rol darRol(@Param("id_rol") Integer id_rol);
     
     @Modifying
     @Transactional
@@ -25,11 +25,11 @@ public interface RolRepository extends JpaRepository<Rol, Integer> {
 
     @Modifying
     @Transactional
-    @Query(value = "UPDATE Roles SET rol= :rol, descripcion= :descripcion WHERE id= :id", nativeQuery = true)
-    void updateRol(@Param("id") Integer id, @Param("descripcion") String descripcion);
+    @Query(value = "UPDATE Roles SET rol= :rol, descripcion= :descripcion WHERE id_rol= :id_rol", nativeQuery = true)
+    void updateRol(@Param("id_rol") Integer id_rol, @Param("descripcion") String descripcion);
 
     @Modifying
     @Transactional
-    @Query(value = "DELETE FROM Roles WHERE id= :id", nativeQuery = true)
-    void deleteRol(@Param("id") Integer id);
+    @Query(value = "DELETE FROM Roles WHERE id_rol= :id_rol", nativeQuery = true)
+    void deleteRol(@Param("id_rol") Integer id_rol);
 }

@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-
 import uniandes.edu.co.hotelandes.modelo.Habitacion;
 import uniandes.edu.co.hotelandes.repositorio.HabitacionRepository;
 
@@ -31,7 +30,7 @@ public class HabitacionesController {
     
     @PostMapping("habitaciones/new/save")
     public String habitacionGuardar(@ModelAttribute Habitacion habitacion) {
-        habitacionRepository.insertarHabitacion(habitacion.getCapacidad(), habitacion.getCosto());
+        habitacionRepository.insertarHabitacion(habitacion.getCapacidad(), habitacion.getCosto(), habitacion.getSede().getId(), habitacion.getTipoHabitacion().getId());
         return "redirect:/habitaciones";
     }
 
@@ -40,7 +39,7 @@ public class HabitacionesController {
         Habitacion habitacion = habitacionRepository.darHabitacion(id);
         if (habitacion != null) {
             model.addAttribute("habitacion", habitacion);
-            return "habitacionesEditar";
+            return "habitacionEditar";
         }
 
         else {
@@ -49,7 +48,7 @@ public class HabitacionesController {
     }
     @PostMapping("/habitaciones/{id}/edit/save")
     public String habitacionEditarGuardar(@PathVariable("id") Integer id, @ModelAttribute Habitacion habitacion) {
-        habitacionRepository.updateHabitacion(id, habitacion.getCapacidad(), habitacion.getCosto());
+        habitacionRepository.updateHabitacion(id, habitacion.getCapacidad(), habitacion.getCosto(), habitacion.getSede().getId(), habitacion.getTipoHabitacion().getId());
         return "redirect:/habitaciones";
     }
 
@@ -67,5 +66,9 @@ public class HabitacionesController {
     public String habitacionEliminar(@PathVariable("id") Integer id) {
         habitacionRepository.deleteHabitacion(id);
         return "redirect:/habitaciones";
+
+        
     }
+
 }
+

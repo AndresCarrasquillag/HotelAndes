@@ -2,7 +2,7 @@ package uniandes.edu.co.hotelandes.repositorio;
 
 import java.util.Collection;
 
-import org.springframework.data.jdbc.repository.query.Modifying;
+import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
@@ -32,3 +32,7 @@ public interface ProductoRepository extends JpaRepository<Producto, Integer>{
     @Query(value = "DELETE FROM productos WHERE id=:id", nativeQuery = true)
     void eliminarProducto(@Param("id") Integer id);
 }
+
+
+
+   

@@ -4,20 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Editar Hotel</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.min.css}"/>
 </head>
 <body>
     
-    <div class="container mt-5">
-        <h2>Editar Hotel</h2>
-        <form th:action="@{'/hoteles/' + ${hotel.id} + '/edit/save'}" th:object="${hotel}" method="post">
-            <div th:replace="~{fragments/hotelForm :: hotelForm(titulo='Editar hotel', hotel=${hotel})}">
-                
-            </div>
-        </form>
-    </div>
+    <form th:action="@{'/hoteles/' + ${hotel.id} + '/edit/save'}" th:object="${hotel}" method="post">
+        <div th:replace="~{fragments/hotelForm :: hotelForm(titulo='Editar hotel', hotel=${hotel})}">
+    </form>
     
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-uGTuby/TAl5C++STvDKbbdiPtiPy0awg5E0nKTfI29m/xlvybuPGkFZlMRdO5DCD" crossorigin="anonymous"></script>
 </body>
 </html>
