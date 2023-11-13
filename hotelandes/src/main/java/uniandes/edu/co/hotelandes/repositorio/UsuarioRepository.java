@@ -17,6 +17,13 @@ public interface UsuarioRepository extends JpaRepository<Usuario, Integer> {
     @Query(value = "SELECT NVL((SELECT roles.id_rol FROM usuarios INNER JOIN roles ON roles.id_rol = usuarios.roles_id_rol WHERE usuarios.\"user\" = :usuario AND usuarios.\"PASSWORD\" = :contraseña), -1) FROM dual", nativeQuery = true)
     Integer logIn(@Param("usuario") String usuario, @Param("contraseña") String contraseña);
 
+
+    @Query(value = "SELECT DISTINCT consumos.id_usuario FROM consumos INNER JOIN servicios ON consumos.servicios_id = servicios.id WHERE servicios.costo > 400 AND consumos.alojamiento IS NOT NULL", nativeQuery = true)
+    Collection<Integer> clientesServicioCaro(@Param("costo") Integer costo);
+
+    @Query(value = "SELECT DISTINCT consumos.id_usuario FROM consumos INNER JOIN servicios ON consumos.servicios_id = servicios.id WHERE servicios.costo > 400 AND consumos.alojamiento IS NOT NULL", nativeQuery = true)
+    Collection<Integer> clientesSalonSpa();
+
     @Query(value = "SELECT id FROM (SELECT EXTRACT(YEAR FROM alojamiento.fecha_ingreso) AS year, CEIL(EXTRACT(MONTH FROM alojamiento.fecha_ingreso) / 3) AS quarter, usuarios.id FROM alojamiento INNER JOIN usuarios ON alojamiento.usuario = usuarios.id GROUP BY EXTRACT(YEAR FROM alojamiento.fecha_ingreso), CEIL(EXTRACT(MONTH FROM alojamiento.fecha_ingreso) / 3), usuarios.id) GROUP BY id HAVING COUNT(*) > 3", nativeQuery = true)
     Collection<Integer> estanciasTrimestrales();
 

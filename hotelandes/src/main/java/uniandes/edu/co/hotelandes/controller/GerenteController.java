@@ -49,9 +49,15 @@ public class GerenteController {
     }
 
 
-    @GetMapping("/gerente/clientesExcelentes/porServicio/")
-    public String clientesExcelentesServicio(Model model){
-        model.addAttribute("clientes", usuarioRepository.estanciasTrimestrales());
-        return "clientesExcelentesEstancia";
+    @GetMapping("/gerente/clientesExcelentes/porServicio/{costo}")
+    public String clientesExcelentesServicio(@PathVariable("costo") Integer costo, Model model){
+        model.addAttribute("clientes", usuarioRepository.clientesServicioCaro(costo));
+        return "clientesExcelentesServicio";
+    }
+
+    @GetMapping("/clientesExcelentes/SalonSpa")
+    public String clientesExcelentesSalonSpa(Model model){
+        model.addAttribute("clientes", usuarioRepository.clientesSalonSpa());
+        return "clientesExcelentesSalonSpa";
     }
 }
