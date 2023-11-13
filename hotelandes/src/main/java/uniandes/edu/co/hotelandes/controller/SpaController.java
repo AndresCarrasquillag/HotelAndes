@@ -6,11 +6,18 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+
+import uniandes.edu.co.hotelandes.modelo.Servicio;
 import uniandes.edu.co.hotelandes.modelo.Spa;
+import uniandes.edu.co.hotelandes.modelo.Supermercado;
+import uniandes.edu.co.hotelandes.repositorio.ServicioRepository;
 import uniandes.edu.co.hotelandes.repositorio.SpaRepository;
 
 @Controller
 public class SpaController {
+
+    @Autowired
+    private ServicioRepository servicioRepository;
     @Autowired
     private SpaRepository spaRepository;
 
@@ -27,6 +34,12 @@ public class SpaController {
         return "spaNuevo";
     }
 
+    @PostMapping("/spas/new/save")
+    public String supermercadoGuardar(@ModelAttribute Servicio servicio,@ModelAttribute Spa spa) {
+        servicioRepository.save(servicio);  //<------- aqui salva e; servicio
+        spaRepository.insertSpa(servicio.getId(),spa.getDuracion(), spa.getTipo_servicio());
+        return "redirect:/spas";
+    }
 
 
     @GetMapping("/spas/{id}/edit")

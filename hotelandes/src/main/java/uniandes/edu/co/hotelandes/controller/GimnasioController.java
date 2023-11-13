@@ -9,12 +9,15 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import uniandes.edu.co.hotelandes.modelo.Gimnasio;
+import uniandes.edu.co.hotelandes.modelo.Servicio;
 import uniandes.edu.co.hotelandes.repositorio.GimnasioRepository;
+import uniandes.edu.co.hotelandes.repositorio.ServicioRepository;
 
 @Controller
 public class GimnasioController {
     
-
+    @Autowired
+    private ServicioRepository servicioRepository;
     @Autowired
     private GimnasioRepository gimnasioRepository;
 
@@ -31,8 +34,9 @@ public class GimnasioController {
     }
 
     @PostMapping("/gimnasios/new/save")
-    public String gimnasioGuardar(@ModelAttribute Gimnasio gimnasio) {
-        gimnasioRepository.insertarGimnasio(gimnasio.getNum_maquinas());
+    public String gimnasioGuardar(@ModelAttribute Servicio servicio,@ModelAttribute Gimnasio gimnasio) {
+        servicioRepository.save(servicio); 
+        gimnasioRepository.insertarGimnasio(servicio.getId(),gimnasio.getNum_maquinas());
         return "redirect:/gimnasios";
     }
 

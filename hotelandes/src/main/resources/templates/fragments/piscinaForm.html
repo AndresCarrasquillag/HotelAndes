@@ -13,6 +13,22 @@
         <form>
             <label  class="col-form-label">Profundidad</label>
             <input  class="form-control" type="number" id="profundidad" name="profundidad" required th:value="${piscina.profundidad}" />
+            <label  class="col-form-label">Costo</label>
+            <input  class="form-control" type="number" id="costo" name="costo" required th:value="${piscina?.servicio?.costo}" />
+            <label  class="col-form-label">Tipo servicio</label>
+            <b>Piscina</b><br/>
+            <input  class="form-control" type="hidden" id="tipo_servicio" name="tipo_servicio" value="piscina" />
+            <label  class="col-form-label">horario_de_servicio</label>
+<!--
+            
+-->
+            
+            <input class="form-control" type="text" id="horario_de_servicio" name="horario_de_servicio" required 
+            th:value="${#dates.format(piscina?.servicio?.horario_de_servicio, 'yyyy-MM-dd')}" 
+            pattern="\d{4}-\d{2}-\d{2}" 
+            title="Ingrese la fecha en el formato aaaa-mm-dd (por ejemplo, 2023-11-06)" />
+
+            
             <div class="text-center">
                 <input type="submit" value="Guardar" class="btn btn-primary"/>
                 <a th:href="@{/piscinas}" class="btn btn btn-primary">Cancelar</a>

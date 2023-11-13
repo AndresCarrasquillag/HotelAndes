@@ -9,12 +9,16 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import uniandes.edu.co.hotelandes.modelo.Piscina;
+import uniandes.edu.co.hotelandes.modelo.Servicio;
 import uniandes.edu.co.hotelandes.repositorio.PiscinaRepository;
+import uniandes.edu.co.hotelandes.repositorio.ServicioRepository;
 
 @Controller
 public class PiscinaController {
     
 
+    @Autowired
+    private ServicioRepository servicioRepository;
     @Autowired
     private PiscinaRepository piscinaRepository;
 
@@ -32,8 +36,9 @@ public class PiscinaController {
     }
 
     @PostMapping("/piscinas/new/save")
-    public String piscinaGuardar(@ModelAttribute Piscina piscina) {
-        piscinaRepository.insertarPiscina(piscina.getProfundidad());
+    public String piscinaGuardar(@ModelAttribute Servicio servicio,@ModelAttribute Piscina piscina) {
+        servicioRepository.save(servicio);
+        piscinaRepository.insertarPiscina(servicio.getId(),piscina.getProfundidad());
         return "redirect:/piscinas";
     }
 

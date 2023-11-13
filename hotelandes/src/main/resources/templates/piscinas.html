@@ -14,22 +14,23 @@
                 <tr>
                     <th>id</th>
                     <th>profundidad</th>
-                    <th>horario de servicio</th>
                     <th>costo</th>
+                    <th>horario de servicio</th>
+                    
                     
 
                 </tr>
             </thead>
             <tbody>
                 <tr th:each="piscina : ${piscinas}">
-                    <td th:text="${piscina.pk.id.id}"></td>
+                    <td th:text="${piscina.id}"></td>
                     <td th:text="${piscina.profundidad}"></td>
-                    <td th:text="${piscina.pk.id.horario_de_servicio}"></td>
-                    <td th:text="${piscina.pk.id.costo}"></td>
+                    <td th:text="${piscina.servicio.costo}"></td>
+                    <td th:text="${piscina.servicio.horario_de_servicio}"></td>
 
                     <td>
-                        <a th:href="@{'/piscinas/'+ ${piscina.pk.id.id} + '/edit'}" class="btn btn-warning btn-sm">Editar</a>
-                        <a th:href="@{'/piscinas/'+ ${piscina.pk.id.id} + '/delete'}" class="btn btn-danger btn-sm" onclick="return confirm('¿Seguro de borrar la picina?')">Borrar</a>
+                        <a th:href="@{'/piscinas/'+ ${piscina.id} + '/edit'}" class="btn btn-warning btn-sm">Editar</a>
+                        <a th:href="@{'/piscinas/'+ ${piscina.id} + '/delete'}" class="btn btn-danger btn-sm" onclick="return confirm('¿Seguro de borrar la piscina?')">Borrar</a>
                     </td>
                 </tr>
 
