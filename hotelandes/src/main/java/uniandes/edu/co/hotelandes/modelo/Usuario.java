@@ -10,7 +10,7 @@ import jakarta.persistence.SequenceGenerator;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "Usuarios")
+@Table(name = "usuarios")
 public class Usuario {
     
     @Id
@@ -37,7 +37,7 @@ public class Usuario {
     public void setRol(Rol rol){
         this.rol=rol;
     }
-    public Rol getRol(Rol rol){
+    public Rol getRol(){
         return rol;
     }
     public Usuario(){;}

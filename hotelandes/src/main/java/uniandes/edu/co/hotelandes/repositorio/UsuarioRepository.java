@@ -32,13 +32,13 @@ public interface UsuarioRepository extends JpaRepository<Usuario, Integer> {
 
     @Modifying
     @Transactional
-    @Query(value = "INSERT INTO Usuarios(id, user, password, nombre, telefono) VALUES(1, :user, :password, :nombre, :telefono)", nativeQuery = true)
-    void insertUsuario(@Param("user") String user, @Param("password") String password, @Param("nombre") String nombre, @Param("telefono") String telefono);
+    @Query(value = "INSERT INTO Usuarios(id, \"user\", password, nombre, telefono, roles_id_rol) VALUES(SQ_USUARIOS.nextval, :user, :password, :nombre, :telefono, :roles_id_rol)", nativeQuery = true)
+    void insertUsuario(@Param("user") String user, @Param("password") String password, @Param("nombre") String nombre, @Param("telefono") String telefono, @Param("roles_id_rol") Integer roles_id_rol);
 
     @Modifying
     @Transactional
-    @Query(value = "UPDATE Usuarios SET user= :user, password= :password, nombre= :nombre, telefono= :telefono WHERE id= :id", nativeQuery = true)
-    void updateUsuarios(@Param("id") Integer id, @Param("user") String user, @Param("password") String password, @Param("nombre") String nombre, @Param("telefono") String telefono);
+    @Query(value = "UPDATE Usuarios SET \"user\"= :user, password= :password, nombre= :nombre, telefono= :telefono, roles_id_rol= :roles_id_rol WHERE id= :id", nativeQuery = true)
+    void updateUsuarios(@Param("id") Integer id, @Param("user") String user, @Param("password") String password, @Param("nombre") String nombre, @Param("telefono") String telefono, @Param("roles_id_rol") Integer roles_id_rol);
 
     @Modifying
     @Transactional

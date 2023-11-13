@@ -15,11 +15,29 @@ public class ConsumosController {
     @Autowired
     private ConsumoRepository consumoRepository;
 
-    @GetMapping("/serviciosPopulares")
+    @GetMapping("/fechasMayoresIngresos")
+    public String fechasConMayoresIngresos(Model model) {
+        model.addAttribute("fechas", consumoRepository.darFechasConMayorIngreso());
+        return "fechasIngresos";
+    }
+
+    @GetMapping("/buenosClientesConsumo")
+    public String buenosClientesPorConsumo(Model model) {
+        model.addAttribute("buenosClientes", consumoRepository.darBuenosClientesPorConsumo());
+        return "buenosClientesPorConsumo";
+    }
+
+    /**@GetMapping("/serviciosPopulares")
     public String serviciosPopulares(Model model) {
         //Collection<RespInfoConsumos> frec = consumoRepository.darServiciosPopulares();
         model.addAttribute("populares", consumoRepository.darServiciosPopulares());
         return "serviciosPopulares";
+    }**/
+
+    @GetMapping("/serviciosBajaDemanda")
+    public String serviciosBajaDemanda(Model model) {
+        model.addAttribute("bajaDemanda", consumoRepository.darServiciosDeBajaDemanda());
+        return "serviciosBajaDemanda";
     }
 
 
@@ -72,4 +90,22 @@ public class ConsumosController {
         return "redirect:/roles";
     }
 
+    @GetMapping("/habitaciones/{id}/verIngresos")
+    public String habitacionVerIngresos(@PathVariable("id") Integer id, Model model) {
+        Integer valorIngreso = consumoRepository.darIngreso(id);
+        model.addAttribute("ingreso", valorIngreso);
+
+        return "habitacionesIngresos";
+    }
+
+    @GetMapping("/serviciosPopulares/{fechaInicio}/{fechaFin}")
+    public String serviciosPopulares(@PathVariable("fechaInicio") String fechaInicio, @PathVariable("fechaFin") String fechaFin, Model model) {
+        model.addAttribute("populares", consumoRepository.darServiciosPopulares(fechaInicio, fechaFin));
+        return "serviciosPopulares";
+    }
+
+    @GetMapping("/serviciosPopularesForm")
+    public String serviciosPopularesForm(Model model) {
+        return "serviciosPopularesForm";
+    }
 }

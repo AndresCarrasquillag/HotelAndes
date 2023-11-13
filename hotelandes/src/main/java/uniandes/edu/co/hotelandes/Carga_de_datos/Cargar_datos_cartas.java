@@ -1,0 +1,33 @@
+
+package uniandes.edu.co.hotelandes.Carga_de_datos;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+
+public class Cargar_datos_cartas {
+    public static void main(String[] args) {
+        String jdbcUrl = "jdbc:oracle:thin:@fn4.oracle.virtual.uniandes.edu.co:1521/PROD";
+        String usuario = "ISIS2304D07202320";
+        String contraseña = "LyGscAGdEemx";
+
+        try {
+            Connection connection = DriverManager.getConnection(jdbcUrl, usuario, contraseña);
+            String sql = "INSERT INTO CARTAS (id) VALUES (?)";
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+
+
+            for (int i = 1; i <= 30000; i++) {
+                int id = i;
+                preparedStatement.setInt(1, id);
+                preparedStatement.executeUpdate();
+            }
+
+            preparedStatement.close();
+            connection.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+}

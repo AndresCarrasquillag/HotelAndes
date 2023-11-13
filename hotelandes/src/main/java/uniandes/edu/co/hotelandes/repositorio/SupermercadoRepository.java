@@ -6,6 +6,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.transaction.annotation.Transactional;
 import uniandes.edu.co.hotelandes.modelo.Supermercado;
+import uniandes.edu.co.hotelandes.modelo.Servicio;
 
 public interface SupermercadoRepository extends JpaRepository<Supermercado, Integer>  {
  
@@ -17,14 +18,14 @@ public interface SupermercadoRepository extends JpaRepository<Supermercado, Inte
     @Query(value = "SELECT * FROM Supermercado WHERE id= :id", nativeQuery = true)
     Supermercado darSupermercado(@Param("id") Integer id);
 
-    @Modifying
+    @Modifying    
     @Transactional
-    @Query(value = "INSERT INTO Supermercado(id, nombre) VALUES(1, :nombre)", nativeQuery = true)
-    void insertarSupermercado(@Param("nombre") String string);
+    @Query(value = "INSERT INTO Supermercado(id, nombre) VALUES(:id, :nombre)", nativeQuery = true)
+    void insertarSupermercado(@Param("id") Integer id,@Param("nombre") String nombre);
 
     @Modifying
     @Transactional
-    @Query(value = "UPDATE Supermercado nombre= :nombre WHERE id= :id", nativeQuery = true)
+    @Query(value = "UPDATE Supermercado SET nombre= :nombre WHERE id= :id", nativeQuery = true)
     void updateSupermercado(@Param("id") Integer id, @Param("nombre") String nombre);
 
     @Modifying
@@ -33,3 +34,4 @@ public interface SupermercadoRepository extends JpaRepository<Supermercado, Inte
     void deleteSupermercado(@Param("id") Integer id);
 
 }
+
