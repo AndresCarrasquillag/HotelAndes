@@ -8,10 +8,11 @@ import java.util.Random;
 
 public class carga_datos_tienda {
     public static void main(String[] args) {
-        // Reemplaza con tu URL de conexión, usuario y contraseña.
-        String jdbcUrl = "jdbc:oracle:thin:@tu_servidor_oracle:puerto/servicio";
+
+        String jdbcUrl = "jdbc:oracle:thin:@fn4.oracle.virtual.uniandes.edu.co:1521/PROD";
         String usuario = "ISIS2304D07202320";
         String contraseña = "LyGscAGdEemx";
+
 
         try {
             Connection connection = DriverManager.getConnection(jdbcUrl, usuario, contraseña);
@@ -20,8 +21,8 @@ public class carga_datos_tienda {
 
             Random random = new Random();
 
-            // Asumiendo que quieres insertar 20000 registros con nombres de tienda aleatorios.
-            for (int i = 1; i <= 20000; i++) {
+            
+            for (int i = 1; i <= 5000; i++) {
                 int id = i;
                 String nombre = "Tienda" + i;
 

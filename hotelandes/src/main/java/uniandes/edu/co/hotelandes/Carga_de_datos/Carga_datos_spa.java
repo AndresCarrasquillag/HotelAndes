@@ -18,7 +18,7 @@ public class Carga_datos_spa {
 
             Random random = new Random();
 
-            for (int i = 1; i <= 30000; i++) {
+            for (int i = 1; i <= 1000; i++) {
                 int id = i;
                 int duracion = 1 + random.nextInt(8); 
                 String tipoServicio = "s" ;

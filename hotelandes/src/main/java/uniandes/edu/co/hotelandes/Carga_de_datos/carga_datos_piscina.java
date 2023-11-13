@@ -18,10 +18,10 @@ public class carga_datos_piscina {
 
             Random random = new Random();
 
-            // Suponemos que quieres insertar una cantidad de registros específica para la tabla piscina
-            for (int i = 1; i <= 30000; i++) {
+            
+            for (int i = 1; i <= 2000; i++) {
                 int id = i;
-                int profundidad = 1 + random.nextInt(4); // Esto dará un valor entre 1 y 4
+                int profundidad = 1 + random.nextInt(4); 
 
                 preparedStatement.setInt(1, id);
                 preparedStatement.setInt(2, profundidad);

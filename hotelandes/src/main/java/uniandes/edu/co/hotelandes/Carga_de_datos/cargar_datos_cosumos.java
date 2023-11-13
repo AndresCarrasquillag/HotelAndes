@@ -18,7 +18,7 @@ public class cargar_datos_cosumos {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             Random random = new Random();
 
-            for (int i = 1; i <= 10000; i++) {
+            for (int i = 1; i <= 1000; i++) {
                 preparedStatement.setInt(1, i); 
                 preparedStatement.setInt(2, 1000 + random.nextInt(5000)); 
                 preparedStatement.setDate(3, new java.sql.Date(System.currentTimeMillis()));

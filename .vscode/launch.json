@@ -2,6 +2,111 @@
     "configurations": [
         {
             "type": "java",
+            "name": "cargar_datos_servicios_en_sedes",
+            "request": "launch",
+            "mainClass": "uniandes.edu.co.hotelandes.Carga_de_datos.cargar_datos_servicios_en_sedes",
+            "projectName": "hotelandes"
+        },
+        {
+            "type": "java",
+            "name": "cargar_datos_reservashabitaciones",
+            "request": "launch",
+            "mainClass": "uniandes.edu.co.hotelandes.Carga_de_datos.cargar_datos_reservashabitaciones",
+            "projectName": "hotelandes"
+        },
+        {
+            "type": "java",
+            "name": "carga_datos_productosencartas",
+            "request": "launch",
+            "mainClass": "uniandes.edu.co.hotelandes.Carga_de_datos.carga_datos_productosencartas",
+            "projectName": "hotelandes"
+        },
+        {
+            "type": "java",
+            "name": "carga_datos_planesdeconsumo",
+            "request": "launch",
+            "mainClass": "uniandes.edu.co.hotelandes.Carga_de_datos.carga_datos_planesdeconsumo",
+            "projectName": "hotelandes"
+        },
+        {
+            "type": "java",
+            "name": "carga_datos_reservas",
+            "request": "launch",
+            "mainClass": "uniandes.edu.co.hotelandes.Carga_de_datos.carga_datos_reservas",
+            "projectName": "hotelandes"
+        },
+        {
+            "type": "java",
+            "name": "carga_datos_hoteles",
+            "request": "launch",
+            "mainClass": "uniandes.edu.co.hotelandes.Carga_de_datos.carga_datos_hoteles",
+            "projectName": "hotelandes"
+        },
+        {
+            "type": "java",
+            "name": "carga_datos_sedes",
+            "request": "launch",
+            "mainClass": "uniandes.edu.co.hotelandes.Carga_de_datos.carga_datos_sedes",
+            "projectName": "hotelandes"
+        },
+        {
+            "type": "java",
+            "name": "carga_datos_tipo_habitacion",
+            "request": "launch",
+            "mainClass": "uniandes.edu.co.hotelandes.Carga_de_datos.carga_datos_tipo_habitacion",
+            "projectName": "hotelandes"
+        },
+        {
+            "type": "java",
+            "name": "carga_datos_habitaciones",
+            "request": "launch",
+            "mainClass": "uniandes.edu.co.hotelandes.Carga_de_datos.carga_datos_habitaciones",
+            "projectName": "hotelandes"
+        },
+        {
+            "type": "java",
+            "name": "carga_datos_consumos",
+            "request": "launch",
+            "mainClass": "uniandes.edu.co.hotelandes.Carga_de_datos.carga_datos_consumos",
+            "projectName": "hotelandes"
+        },
+        {
+            "type": "java",
+            "name": "carga_datos_supermercado",
+            "request": "launch",
+            "mainClass": "uniandes.edu.co.hotelandes.Carga_de_datos.carga_datos_supermercado",
+            "projectName": "hotelandes"
+        },
+        {
+            "type": "java",
+            "name": "Carga_datos_restaurante",
+            "request": "launch",
+            "mainClass": "uniandes.edu.co.hotelandes.Carga_de_datos.Carga_datos_restaurante",
+            "projectName": "hotelandes"
+        },
+        {
+            "type": "java",
+            "name": "Carga_datos_gimnasio",
+            "request": "launch",
+            "mainClass": "uniandes.edu.co.hotelandes.Carga_de_datos.Carga_datos_gimnasio",
+            "projectName": "hotelandes"
+        },
+        {
+            "type": "java",
+            "name": "Carga_datos_lavanderia",
+            "request": "launch",
+            "mainClass": "uniandes.edu.co.hotelandes.Carga_de_datos.Carga_datos_lavanderia",
+            "projectName": "hotelandes"
+        },
+        {
+            "type": "java",
+            "name": "carga_datos_salon",
+            "request": "launch",
+            "mainClass": "uniandes.edu.co.hotelandes.Carga_de_datos.carga_datos_salon",
+            "projectName": "hotelandes"
+        },
+        {
+            "type": "java",
             "name": "carga_datos_tienda",
             "request": "launch",
             "mainClass": "uniandes.edu.co.hotelandes.Carga_de_datos.carga_datos_tienda",

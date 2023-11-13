@@ -20,7 +20,7 @@ public class carga_datos_alojamiento {
 
             Random random = new Random();
 
-            for (int i = 1; i <= 10000; i++) {
+            for (int i = 1; i <= 5000; i++) {
                 int id = i;
                 int habitacion = 100 + random.nextInt(900); 
                 long milisIngreso = System.currentTimeMillis() + (long) (random.nextDouble() * (10L * 365 * 24 * 60 * 60 * 1000));
@@ -34,8 +34,11 @@ public class carga_datos_alojamiento {
                 preparedStatement.setInt(5, usuarioId);
                 preparedStatement.executeUpdate();
             }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
+            preparedStatement.close();
+            connection.close();
+         } catch (SQLException e) {
+        e.printStackTrace();
+    
     }
+}
 }
