@@ -29,7 +29,7 @@ public class GerenteController {
     @GetMapping("/gerente/{usuario}/{contraseña}")
     public String gerente(@PathVariable("usuario") String usuario, @PathVariable("contraseña") String contraseña, Model model) {
         int vartemp = usuarioRepository.logIn(usuario, contraseña);
-        if ( vartemp != -1 && vartemp ==3){
+        if ( vartemp != -1 && vartemp ==100000){
             model.addAttribute("rol", usuarioRepository.logIn(usuario, contraseña));
             return "consolaGerente";
         }

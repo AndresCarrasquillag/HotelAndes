@@ -24,7 +24,7 @@ public interface ServicioRepository extends JpaRepository<Servicio, Integer> {
     @Query(value = "SELECT SERVICIOS.ID AS id_Servicio, CONSUMOS.COSTO AS costo_servicio, SERVICIOS.TIPO_SERVICIO AS Tipo_servicio, CONSUMOS.FECHA_DE_PAGO AS Fecha_de_pago FROM SERVICIOS, CONSUMOS WHERE SERVICIOS.ID = CONSUMOS.SERVICIOS_ID AND FECHA_DE_PAGO BETWEEN TO_DATE(:fechaInicio, 'YYYY-MM-DD') AND TO_DATE(:fechaFin, 'YYYY-MM-DD') AND CONSUMOS.COSTO BETWEEN :costo1 AND :costo2 AND SERVICIOS.TIPO_SERVICIO=:tipo_servicio", nativeQuery = true)
     Collection<RespInfoServs> darServiciosCombinado(@Param("fechaInicio") String fechaInicio, @Param("fechaFin") String fechaFin, @Param("costo1") int costo1, @Param("costo2") int costo2, @Param("tipo_servicio") String tipo_servicio);
 
-    @Query(value = "SELECT * FROM Servicios", nativeQuery = true)
+    @Query(value = "SELECT * FROM Servicios WHERE servicios.id<200", nativeQuery = true)
     Collection<Servicio> darServicios();
 
     @Query(value = "SELECT * FROM Servicios WHERE id= :id", nativeQuery = true)

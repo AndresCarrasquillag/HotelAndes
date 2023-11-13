@@ -11,7 +11,7 @@ import uniandes.edu.co.hotelandes.modelo.Usuario;
 public interface UsuarioRepository extends JpaRepository<Usuario, Integer> {
     
     
-    @Query(value = "SELECT * FROM Usuarios", nativeQuery = true)
+    @Query(value = "SELECT * FROM Usuarios WHERE usuarios.id<100", nativeQuery = true)
     Collection<Usuario> darUsuarios();
 
     @Query(value = "SELECT NVL((SELECT roles.id_rol FROM usuarios INNER JOIN roles ON roles.id_rol = usuarios.roles_id_rol WHERE usuarios.\"user\" = :usuario AND usuarios.\"PASSWORD\" = :contraseña), -1) FROM dual", nativeQuery = true)
